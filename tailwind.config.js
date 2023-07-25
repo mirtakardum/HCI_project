@@ -6,10 +6,6 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    colors: {
-      dark: '#11112B',
-      light: '#A7AFCC'
-    },
     borderWidth: {
       DEFAULT: '1px',
       '0': '0',
@@ -28,6 +24,11 @@ module.exports = {
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
         'space': ['Space Grotesk', 'sans-serif']
+      },
+      colors: {
+        dark: '#11112B',
+        light: '#A7AFCC',
+        babyblue: '#92DEED'
       },
     },
   },

@@ -23,7 +23,12 @@ module.exports = {
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
-        'space': ['Space Grotesk', 'sans-serif']
+        'space': ['"Space Grotesk"', 'monospace'],
+        'retro': ['"Press Start 2P"', 'cursive']
+      },
+      colors: {
+        dark: '#11112B',
+        light: '#A7AFCC'
       },
       colors: {
         dark: '#11112B',

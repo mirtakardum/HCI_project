@@ -1,11 +1,15 @@
 function Cards(){
     return(
         <>
-        <div>
-            <a href="#" className=" mx-auto block max-w-sm p-10 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                <p className="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-            </a>
+        <div className="flex mt-8">
+            <div className="mx-auto block w-80 h-80 bg-gradient-to-b from-gray-600 to-slate-900 rounded-lg shadowx">
+                <div className="w-full mt-8 px-3 flex justify-between">
+                    <img src="/images/database.png" className="h-16 ml-2"></img>
+                    <img src="/images/arrow2.svg" className="h-12 mt-2 mr-2"></img>
+                </div>
+                <p className="font-space font-bold text-4xl text-white w-10 mt-8 ml-6">Cloud storage</p>
+                <p className="font-space text-l text-white mt-2 ml-6">Provides customized solutions to create and maintain software applications.</p>
+            </div>
         </div>
         </>
     )

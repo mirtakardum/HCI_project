@@ -9,10 +9,9 @@ function Services(){
   const [selected1, setSelected1] = useState(true)
   const [selected2, setSelected2] = useState(false)
 
-  function changeSelected(){
+  function changeSelected() {
     setSelected1(!selected1)
     setSelected2(!selected2)
-    console.log(selected1, selected2)
   }
 
   const storageTitle = "Cloud storage"

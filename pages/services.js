@@ -1,9 +1,10 @@
 import React from "react";
 import Header from "../components/Header.js";
-import Hero from "../components/Hero.js";
+import Hero from "../components/landing/Hero.js";
 import Navbar from "../components/Navbar.js";
 import PathDisplay from "../components/PathDisplay.js"
 import Cards from "../components/Cards.js";
+import PathDisplay from "@/components/PathDisplay.js";
 
 function Services(){
   return(

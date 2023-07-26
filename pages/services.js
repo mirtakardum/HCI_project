@@ -1,18 +1,40 @@
 import React from "react";
-import Header from "../components/Header.js";
-import Hero from "../components/landing/Hero.js";
 import Navbar from "../components/Navbar.js";
 import PathDisplay from "../components/PathDisplay.js"
 import Cards from "../components/Cards.js";
-import PathDisplay from "@/components/PathDisplay.js";
+import { useState } from "react";
 
 function Services(){
+
+  const [selected1, setSelected1] = useState(true)
+  const [selected2, setSelected2] = useState(false)
+
+  function changeSelected() {
+    setSelected1(!selected1)
+    setSelected2(!selected2)
+  }
+
+  const storageTitle = "Cloud storage"
+  const computingTitle = "Cloud computing"
+
+  const storageDescription = "Gain access to some of the most secure and fastest storage in the industry."
+  const computingDescription = "Unlock the worlds best hardware and boost your development process."
+
+  const storageIcon = "/images/database.png"
+  const computingIcon = "/images/cloud.png"
+
   return(
     <>
     <div className="h-screen bg-dark">
       <Navbar />
       <PathDisplay />
-      <Cards />
+      <div className="absolute top-[17%] right-[40%] h-[5%] w-[3%] z-10 float-right bg-light"></div>
+      <div className="absolute top-[25%] left-[30%] h-[4%] w-[2%] z-10 float-right bg-light"></div>
+      <div className="absolute top-[20%] right-[10%] h-[3.5%] w-[2%] z-10 float-right bg-light"></div>
+      <div className="flex justify-center">
+      <Cards title={storageTitle} description={storageDescription} icon={storageIcon} id={1} selected={selected1} changeSelected={changeSelected}/>
+      <Cards title={computingTitle} description={computingDescription} icon={computingIcon} id={2} selected={selected2} changeSelected={changeSelected}/>
+      </div>
     </div>
     </>
   )

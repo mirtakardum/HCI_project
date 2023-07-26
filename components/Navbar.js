@@ -14,7 +14,7 @@ function Navbar(){
                 </div>
                 <div className="flex pr-6">
                     <ul className="flex text-white text-center">
-                    <button type="button" class="text-white-900 hover:text-white border-3 border-white-800 hover:bg-babyblue focus:ring-4 focus:outline-none focus:ring-gray-300 font-bold font-poppins rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-white-600 dark:focus:ring-gray-800">SIGN IN</button>
+                    <button type="button" className="text-white-900 hover:text-white border-3 border-white-800 hover:bg-babyblue focus:ring-4 focus:outline-none focus:ring-gray-300 font-bold font-poppins rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-white-600 dark:focus:ring-gray-800">SIGN IN</button>
                     </ul>
                 </div>
             </nav>

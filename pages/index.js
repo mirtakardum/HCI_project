@@ -4,6 +4,7 @@ import Hero from "../components/landing/Hero.js";
 import CTA from "@/components/landing/CTA.js";
 import Why from "@/components/landing/Why.js";
 import ServiceList from "@/components/landing/ServiceList.js";
+import Testimonials from "@/components/landing/Testimonials.js";
 
 function Homepage(){
   return(
@@ -14,6 +15,7 @@ function Homepage(){
       <CTA />
       <Why />
       <ServiceList />
+      <Testimonials />
     </div>
     </>
   )

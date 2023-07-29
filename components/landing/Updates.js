@@ -2,7 +2,7 @@
 function Updates(){
     return(
         <>
-        <div className="pt-10 h-screen bg-light">
+        <div className="pt-10 h-[90%] bg-light">
             <p className="font-space text-dark text-7xl ml-20 font-bold">Always stay updated</p>
             <div className="flex mt-40 justify-end h-[41%]">
                 <button type="button" className="h-12 mr-52 mt-52 text-black border-dotted border-3 border-black font-medium rounded-lg text-m font-retro text-center px-5 py-2.5">

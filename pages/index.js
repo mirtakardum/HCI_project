@@ -6,6 +6,7 @@ import Why from "@/components/landing/Why.js";
 import ServiceList from "@/components/landing/ServiceList.js";
 import Testimonials from "@/components/landing/Testimonials.js";
 import Updates from "@/components/landing/Updates.js";
+import FAQ from "@/components/landing/FAQ.js";
 
 function Homepage(){
   return(
@@ -18,6 +19,7 @@ function Homepage(){
       <ServiceList />
       <Testimonials />
       <Updates />
+      <FAQ />
     </div>
     </>
   )

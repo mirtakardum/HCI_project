@@ -7,10 +7,12 @@ function Cards({ title, description, icon, id, selected, changeSelected }){
                     <img src={icon} className="h-16 ml-2"></img>
                     <img src="/images/arrow2.svg" className="h-12 mt-2 mr-2"></img>
                 </div>
-                <p className="font-space text-4xl text-white font-bold w-10 mt-8 ml-6">{title}</p>
-                <p className="font-space text-l text-white mt-2 ml-6 w-64">{description}</p>
+                    <p className="font-space text-4xl text-white font-bold w-10 mt-8 ml-6">{title}</p>
+                    <p className="font-space text-l text-white mt-2 ml-6 w-64">{description}</p>
+                            
             </div>
         </div>
+          
         </>
     )
 }

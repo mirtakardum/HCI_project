@@ -1,17 +1,28 @@
+import { useState } from "react"
+import { motion } from "framer-motion"
 
 
 function ServiceList(){
+
+    const [selected1, setSelected1] = useState(true)
+    const [selected2, setSelected2] = useState(false)
+  
+    function changeSelected() {
+      setSelected1(!selected1)
+      setSelected2(!selected2)
+    }
+
     return(
         <>
         <div className="bg-light h-[100%] pt-10">
             <div className="flex justify-between">
                 <div>
-                    <div className="block max-w-sm h-52 ml-20 mt-20 p-6 bg-gradient-to-b from-slate-300 to-light rounded-lg shadow cursor-pointer">
-                        <p className="mt-16 text-dark font-space font-bold text-3xl w-[30%]">Cloud Computing</p>
+                    <div className="block max-w-sm h-52 ml-20 mt-20 p-6 bg-gradient-to-b from-slate-300 to-light rounded-lg shadow cursor-pointer hover:bg-gradient-to-b hover:from-gray-600 hover:to-slate-900 group" onClick={changeSelected}>
+                        <p className="mt-16 text-dark font-space font-bold text-3xl w-[30%] group-hover:text-white">Cloud Computing</p>
                     </div>
-                    <div className="block max-w-sm h-52 ml-20 mt-20 p-6 bg-gradient-to-b from-slate-300 to-light rounded-lg shadow cursor-pointer">
-                    <p className="mt-16 text-dark font-space font-bold text-3xl w-[30%]">Cloud Storage</p>
-                    </div>
+                    <motion.div className="block max-w-sm h-52 ml-20 mt-20 p-6 bg-gradient-to-b from-slate-300 to-light rounded-lg shadow cursor-pointer hover:bg-gradient-to-b hover:from-gray-600 hover:to-slate-900 group" onClick={changeSelected}>
+                    <p className="mt-16 text-dark font-space font-bold text-3xl w-[30%] group-hover:text-white">Cloud Storage</p>
+                    </motion.div>
                 </div>
                 <div className="w-[50%]">
                     <p className="font-space text-7xl text-dark font-bold mt-14 ml-32">Services</p>

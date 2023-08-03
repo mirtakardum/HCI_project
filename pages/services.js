@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../components/Navbar.js";
+import Header from "../components/Header.js";
 import PathDisplay from "../components/PathDisplay.js"
 import Cards from "../components/Cards.js";
 import { useState } from "react";
@@ -31,7 +31,7 @@ function Services(){
   return(
     <>
     <div className="h-fit bg-dark">
-      <Navbar />
+      <Header theme={"dark"}/>
       <PathDisplay title={servicesTitle}/>
       <div className="absolute top-[17%] right-[40%] h-[5%] w-[3%] z-10 float-right bg-light"></div>
       <div className="absolute top-[25%] left-[30%] h-[4%] w-[2%] z-10 float-right bg-light"></div>

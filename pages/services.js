@@ -1,10 +1,11 @@
 import React from "react";
-import Navbar from "../components/Navbar.js";
 import PathDisplay from "../components/PathDisplay.js"
 import Cards from "../components/Cards.js";
 import { useState } from "react";
 import ComputingDisplay from "@/components/services/ComputingDisplay.js";
 import DesktopMockup from "@/components/services/DesktopMockup.js";
+import Header from "@/components/Header.js";
+import ComputingAttributes from "@/components/services/ComputingAttributes.js";
 
 function Services(){
 
@@ -31,7 +32,7 @@ function Services(){
   return(
     <>
     <div className="h-fit bg-dark">
-      <Navbar />
+      <Header />
       <PathDisplay title={servicesTitle}/>
       <div className="absolute top-[17%] right-[40%] h-[5%] w-[3%] z-10 float-right bg-light"></div>
       <div className="absolute top-[25%] left-[30%] h-[4%] w-[2%] z-10 float-right bg-light"></div>
@@ -42,6 +43,7 @@ function Services(){
       </div>
       <ComputingDisplay />
       <DesktopMockup />
+      <ComputingAttributes />
     </div>
     </>
   )

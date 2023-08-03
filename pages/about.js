@@ -1,8 +1,12 @@
 import React from "react";
-import Navbar from "../components/Navbar.js";
+import Header from "../components/Header.js";
 import PathDisplay from "../components/PathDisplay.js";
 import AboutText from "../components/about/AboutText.js";
+<<<<<<< HEAD
+import Founders from "../components/about/Founders.js";
+=======
 import Founders from "../components/Founders.js";
+>>>>>>> d952fe78ea5ac1da55d4cbc9bc742bfc930af9dd
 import Principles from "../components/about/Principles.js";
 
 function About(){
@@ -13,7 +17,7 @@ function About(){
     return(
       <>
       <div className="h-screen bg-dark">
-        <Navbar/>
+        <Header theme={"dark"}/>
         <PathDisplay title={aboutTitle}/>
         <div className="absolute top-[17%] right-[25%] h-[4%] w-[2%] z-10 float-right bg-light"></div>
         <div className="absolute top-[60%] left-[50%] h-[2%] w-[1%] z-10 float-right bg-light"></div>

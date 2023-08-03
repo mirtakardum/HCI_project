@@ -4,8 +4,8 @@ function FAQ(){
 
     const qna = [
         {
-            question: "What does MVK offer?",
-            answer: "MVK offers a cloud hosted platform where companies or individuals can store data and use the worlds fastest hardware to run their software."
+            question: "What does CloudByte offer?",
+            answer: "CloudByte offers a cloud hosted platform where companies or individuals can store data and use the worlds fastest hardware to run their software."
         },
         {
             question: "What should my business get?",
@@ -16,7 +16,7 @@ function FAQ(){
             answer: "Our pricing varies based on the specific services and needs of your business. We offer flexible pricing options to suit your budget and requirements."
         },
         {
-            question: "How do I get started with MVK",
+            question: "How do I get started with CloudByte?",
             answer: "It's simple! Visit our pricing page to set up your plan and we'll send you an email containing all of your account information. Once your account is active, you decide who has access to your cloud platform."
         },
 

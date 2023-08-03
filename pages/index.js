@@ -7,11 +7,12 @@ import ServiceList from "@/components/landing/ServiceList.js";
 import Testimonials from "@/components/landing/Testimonials.js";
 import Updates from "@/components/landing/Updates.js";
 import FAQ from "@/components/landing/FAQ.js";
+import Footer from "@/components/Footer.js";
 
 function Homepage(){
   return(
     <>
-    <div className="h-screen bg-light">
+    <div className="h-fill bg-light">
       <Header />
       <Hero />
       <CTA />
@@ -20,6 +21,7 @@ function Homepage(){
       <Testimonials />
       <Updates />
       <FAQ />
+      <Footer />
     </div>
     </>
   )

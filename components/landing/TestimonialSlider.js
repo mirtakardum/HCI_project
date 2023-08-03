@@ -8,11 +8,12 @@ import { BiRightArrowAlt } from "react-icons/bi"
 function TestimonialSlider(){
 
         const settings = {
-          dots: true,
-          infinite: true,
-          speed: 500,
-          slidesToShow: 1,
-          slidesToScroll: 1
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: <BsFillArrowLeftCircleFill />
         };
 
     return(
@@ -20,8 +21,8 @@ function TestimonialSlider(){
         <div className="relative mx-auto w-[90%] pb-10">
             <Slider {...settings}>
                 <div>
-                    <div className="mx-auto block mt-10 w-[60%] h-80 bg-gradient-to-b from-gray-600 to-slate-900 rounded-lg shadowx">
-                        <p className="text-center font-poppins text-white text-4xl pt-10 w-[80%] mx-auto">"Switching to MVK made our life so much easier. We require some of the fastest computing possible
+                    <div className="mx-auto block mt-10 w-80 lg:w-[60%] h-80 bg-gradient-to-b from-gray-600 to-slate-900 rounded-lg shadowx">
+                        <p className="text-center font-poppins text-white text-xl lg:text-4xl pt-10 w-[80%] mx-auto">"Switching to MVK made our life so much easier. We require some of the fastest computing possible
                                 to keep our clients' experience at a premium level and MVK makes it look easy."</p>
                     </div>
                     <div className="mx-auto mt-4">
@@ -31,8 +32,8 @@ function TestimonialSlider(){
                     </div>    
                 </div>
                 <div>
-                    <div className="mx-auto block mt-10 w-[60%] h-80 bg-gradient-to-b from-gray-600 to-slate-900 rounded-lg shadowx">
-                        <p className="text-center font-poppins text-white text-4xl pt-10 w-[80%] mx-auto">"OpenAI is constantly developing the world's largest and most complex ML models. Those kind of models
+                    <div className="mx-auto block mt-10 w-80 lg:w-[60%] h-80 bg-gradient-to-b from-gray-600 to-slate-900 rounded-lg shadowx">
+                        <p className="text-center font-poppins text-white text-xl lg:text-4xl pt-10 w-[80%] mx-auto">"OpenAI is constantly developing the world's largest and most complex ML models. Those kind of models
                              require the fastest possible hardware to train. MVK supplies that, and then some."</p>
                     </div>
                     <div className="mx-auto mt-4">
@@ -42,8 +43,8 @@ function TestimonialSlider(){
                     </div>    
                 </div>
                 <div>
-                    <div className="mx-auto block mt-10 w-[60%] h-80 bg-gradient-to-b from-gray-600 to-slate-900 rounded-lg shadowx">
-                        <p className="text-center font-poppins text-white text-4xl pt-10 w-[80%] mx-auto">"We have to run countless simulations each and every day, so time is of the essence. MVK's insane hardware
+                    <div className="mx-auto block mt-10 w-80 lg:w-[60%] h-80 bg-gradient-to-b from-gray-600 to-slate-900 rounded-lg shadowx">
+                        <p className="text-center font-poppins text-white text-xl lg:text-4xl pt-10 w-[80%] mx-auto">"We have to run countless simulations each and every day, so time is of the essence. MVK's insane hardware
                          and connection speeds allows us do so with ease."</p>
                     </div>
                     <div className="mx-auto mt-4">

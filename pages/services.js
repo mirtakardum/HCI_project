@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar.js";
 import PathDisplay from "../components/PathDisplay.js"
 import Cards from "../components/Cards.js";
 import { useState } from "react";
+import ComputingDisplay from "@/components/services/ComputingDisplay.js";
+import DesktopMockup from "@/components/services/DesktopMockup.js";
 
 function Services(){
 
@@ -28,7 +30,7 @@ function Services(){
 
   return(
     <>
-    <div className="h-screen bg-dark">
+    <div className="h-fit bg-dark">
       <Navbar />
       <PathDisplay title={servicesTitle}/>
       <div className="absolute top-[17%] right-[40%] h-[5%] w-[3%] z-10 float-right bg-light"></div>
@@ -38,6 +40,8 @@ function Services(){
       <Cards title={storageTitle} description={storageDescription} icon={storageIcon} id={1} selected={selected1} changeSelected={changeSelected} />
       <Cards title={computingTitle} description={computingDescription} icon={computingIcon} id={2} selected={selected2} changeSelected={changeSelected} />
       </div>
+      <ComputingDisplay />
+      <DesktopMockup />
     </div>
     </>
   )

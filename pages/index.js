@@ -10,10 +10,13 @@ import FAQ from "@/components/landing/FAQ.js";
 import Footer from "@/components/Footer.js";
 
 function Homepage(){
+
+
+
   return(
     <>
     <div className="h-fill bg-light">
-      <Header />
+      <Header theme={"light"}/>
       <Hero />
       <CTA />
       <Why />

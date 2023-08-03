@@ -1,9 +1,9 @@
 import React from "react";
 import Navbar from "../components/Navbar.js";
 import PathDisplay from "../components/PathDisplay.js";
-import AboutText from "../components/AboutText.js";
+import AboutText from "../components/about/AboutText.js";
 import Founders from "../components/Founders.js";
-import Principles from "../components/Principles.js";
+import Principles from "../components/about/Principles.js";
 
 function About(){
 

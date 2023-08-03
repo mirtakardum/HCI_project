@@ -16,19 +16,11 @@ function Header({ theme }){
             <a href="/"><img src={theme === "light" ? '/images/logo.png' : '/images/logowhite.png'} className="w-20 h-20 md:ml-10" /></a>
             <div className="hidden md:flex pr-6 mx-auto">
             <ul className={`flex ${theme === "light" ? "text-dark" : "text-white"} text-center`}>
-<<<<<<< HEAD
-                <li className={`p-6 h-[100%] text-l ${theme === "light" ? 'text-white' : 'text-babyblue'} cursor-pointer font-poppins font-bold`}>HOME</li>
-                <a href="/services"><li className={`p-6 h-[100%] text-l ${theme === "light" ? 'hover:text-white' : 'hover:text-babyblue'} cursor-pointer font-poppins font-bold`}>SERVICES</li></a>
-                <li className={`p-6 h-[100%] text-l ${theme === "light" ? 'hover:text-white' : 'hover:text-babyblue'} cursor-pointer font-poppins font-bold`}>PRICING</li>
-                <li className={`p-6 h-[100%] text-l ${theme === "light" ? 'hover:text-white' : 'hover:text-babyblue'} cursor-pointer font-poppins font-bold`}>ABOUT US</li>
-                <li className={`p-6 h-[100%] text-l ${theme === "light" ? 'hover:text-white' : 'hover:text-babyblue'} cursor-pointer font-poppins font-bold`}>BLOG</li>
-=======
                 <li className={`p-6 h-[100%] text-l ${theme === "light" ? "text-white" : "text-babyblue"} cursor-pointer font-poppins font-bold`}>HOME</li>
                 <a href="/services"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>SERVICES</li></a>
                 <li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>PRICING</li>
                 <li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>ABOUT US</li>
                 <li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>BLOG</li>
->>>>>>> 27224438670a26c11ba2f44c7da340c3027a0012
             </ul>
             </div>
             <div className="hidden md:flex pr-6">

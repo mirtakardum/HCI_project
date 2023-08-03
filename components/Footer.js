@@ -4,27 +4,27 @@ import { BiLogoTwitter } from "react-icons/bi"
 import { AiFillInstagram } from "react-icons/ai"
 
 
-function Footer(){
+function Footer({ theme }){
 
     return(
         <>        
-        <footer class="bg-light">
+        <footer class={`${ theme === "light" ?  "bg-light" : "bg-dark"}`}>
             <div class="relative mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-                <div class="absolute top-[50%] right-[15%] h-[3.5%] w-[1%] z-10 float-right bg-dark"></div>
-                <div class="absolute top-[65%] left-[45%] h-[6.5%] w-[2%] z-10 float-right bg-dark"></div>
-                <div class="absolute top-[30%] left-[10%] h-[8%] w-[2.5%] z-10 float-right bg-dark"></div>
+                <div class={`absolute top-[50%] right-[15%] h-[3.5%] w-[1%] z-10 float-right  ${theme === "light" ? "bg-dark" : "bg-light"}`}></div>
+                <div class={`absolute top-[65%] left-[45%] h-[6.5%] w-[2%] z-10 float-right  ${theme === "light" ? "bg-dark" : "bg-light"}`}></div>
+                <div class={`absolute top-[30%] left-[15%] h-[8%] w-[2.5%] z-10 float-right  ${theme === "light" ? "bg-dark" : "bg-light"}`}></div>
                 <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
-                    <a href="https://flowbite.com/" class="flex items-center">
-                        <img src="/images/logo.png" class="h-8 mr-3" alt="CloudByte Logo" />
-                        <span class="self-center text-2xl font-semibold whitespace-nowrap font-poppins ">CloudByte</span>
+                    <a href="/" class="flex items-center">
+                        <img src={theme === "light" ? '/images/logo.png' : '/images/logowhite.png'} class="h-8 mr-3" alt="CloudByte Logo" />
+                        <span class={` ${theme === "light" ? "text-dark" : "text-white"} self-center text-2xl font-semibold whitespace-nowrap font-poppins`}>CloudByte</span>
                     </a>
-                    <img src="/images/cta-button.png" class="h-20 mr-3 mt-14" />
+                    <img src={theme === "light" ? '/images/cta-button.png' : '/images/cta-blue.png'} class="h-20 mr-3 mt-14" />
                 </div>
                 <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                     <div>
-                        <h2 class="mb-6 text-lg font-bold font-lato text-dark uppercase">Explore</h2>
-                        <ul class="text-dark dark:text-gray-400 font-medium">
+                        <h2 class={` ${theme === "light" ? "text-dark" : "text-white"} mb-6 text-lg font-bold font-lato uppercase`}>Explore</h2>
+                        <ul class={`${theme === "light" ? "text-dark" : "text-white"} font-medium`}>
                             <li class="mb-2">
                                 <a href="/" class="hover:underline">Home</a>
                             </li>
@@ -43,8 +43,8 @@ function Footer(){
                         </ul>
                     </div>
                     <div>
-                        <h2 class="mb-6 text-lg font-bold text-dark uppercase">Follow us</h2>
-                        <ul class="text-dark dark:text-gray-400 font-medium">
+                        <h2 class={` ${theme === "light" ? "text-dark" : "text-white"} mb-6 text-lg font-bold uppercase`}>Follow us</h2>
+                        <ul class={`${theme === "light" ? "text-dark" : "text-white"} font-medium`}>
                             <li class="mb-2">
                                 <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
                             </li>
@@ -60,8 +60,8 @@ function Footer(){
                         </ul>
                     </div>
                     <div>
-                        <h2 class="mb-6 text-lg font-bold font-lato text-dark uppercase">Legal</h2>
-                        <ul class="text-dark font-medium">
+                        <h2 class={` ${theme === "light" ? "text-dark" : "text-white"} mb-6 text-lg font-bold uppercase`}>Legal</h2>
+                        <ul class={`${theme === "light" ? "text-dark" : "text-white"} font-medium`}>
                             <li class="mb-4">
                                 <a href="#" class="hover:underline">Privacy Policy</a>
                             </li>
@@ -72,9 +72,9 @@ function Footer(){
                     </div>
                 </div>
             </div>
-            <hr class="my-6 border-dark sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <hr class={` ${theme === "light" ? "border-dark" : "border-white"} my-6 sm:mx-auto dark:border-gray-700 lg:my-8`} />
             <div class="sm:flex sm:items-center sm:justify-between">
-                <span class="text-sm text-dark sm:text-center">© 2023 <a href="https://flowbite.com/" class="hover:underline">CloudByte™</a>. All Rights Reserved.
+                <span class={`${theme === "light" ? "text-dark" : "text-white"} text-sm sm:text-center`}>© 2023 <a href="/" class="hover:underline">CloudByte™</a>. All Rights Reserved.
                 </span>
                 <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
                     <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">

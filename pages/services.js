@@ -1,15 +1,12 @@
 import React from "react";
-<<<<<<< HEAD
-import Header from "../components/Header.js";
-=======
->>>>>>> 27224438670a26c11ba2f44c7da340c3027a0012
 import PathDisplay from "../components/PathDisplay.js"
-import Cards from "../components/Cards.js";
+import Cards from "../components/services/Cards.js";
 import { useState } from "react";
 import ComputingDisplay from "@/components/services/ComputingDisplay.js";
 import DesktopMockup from "@/components/services/DesktopMockup.js";
-import Header from "@/components/Header.js";
+import Header from "../components/Header.js";
 import ComputingAttributes from "@/components/services/ComputingAttributes.js";
+import Footer from "../components/Footer.js"
 
 function Services(){
 
@@ -36,11 +33,7 @@ function Services(){
   return(
     <>
     <div className="h-fit bg-dark">
-<<<<<<< HEAD
-      <Header theme={"dark"}/>
-=======
       <Header />
->>>>>>> 27224438670a26c11ba2f44c7da340c3027a0012
       <PathDisplay title={servicesTitle}/>
       <div className="absolute top-[17%] right-[40%] h-[5%] w-[3%] z-10 float-right bg-light"></div>
       <div className="absolute top-[25%] left-[30%] h-[4%] w-[2%] z-10 float-right bg-light"></div>
@@ -52,6 +45,7 @@ function Services(){
       <ComputingDisplay />
       <DesktopMockup />
       <ComputingAttributes />
+      <Footer theme={"dark"}/>
     </div>
     </>
   )

@@ -24,7 +24,7 @@ function Homepage(){
       <Testimonials />
       <Updates />
       <FAQ />
-      <Footer />
+      <Footer theme={"light"} />
     </div>
     </>
   )

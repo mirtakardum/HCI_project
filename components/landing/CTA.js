@@ -9,7 +9,7 @@ function CTA(){
             </div>
         <p className="text-dark font-space text-7xl font-bold text-center">with us.</p>
         <div className="mt-20">
-            <p className="text-center text-dark font-poppins text-xl">In a rapidly evolving digital landscape, MVK keeps bringin assurance and stability to all it's clients.</p>
+            <p className="text-center text-dark font-poppins text-xl">In a rapidly evolving digital landscape, CloudByte keeps bringin assurance and stability to all it's clients.</p>
             <p className="text-center text-dark font-poppins text-xl">Join us now and let our team of the worlds best experts show you why so many trust us.</p>
         </div>
         <div className="lg:flex mt-32">

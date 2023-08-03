@@ -13,7 +13,7 @@ function Homepage(){
   return(
     <>
     <div className="h-fill bg-light">
-      <Header />
+      <Header theme={"light"} />
       <Hero />
       <CTA />
       <Why />

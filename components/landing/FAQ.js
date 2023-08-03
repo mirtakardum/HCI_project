@@ -35,18 +35,18 @@ function FAQ(){
 
     return(
         <>
-        <div className="pt-10 h-screen bg-dark">
+        <div className="pt-10 h-fit pb-10 lg:h-screen bg-dark">
             <p className="text-7xl font-space text-white font-bold text-center">FAQ</p>
             <p className="text-xl font-poppins text-white text-center">For any further questions feel free to <a className="underline cursor-pointer">contact us</a></p>
             <div className="text-center mt-20">
                 {qna.map((item, i) => (
-                    <div className="cursor-pointer hover:bg-slate-600" onClick={() => toggle(i)}>
-                        <div className="">
-                            <p className="text-3xl font-poppins text-white font-semibold mt-6">{item.question}</p>
-                            <span className="text-white text-xl font-poppins">{selectedQuestion === i ? '-' : '+'}</span>
+                    <div className="cursor-pointer hover:bg-slate-800" onClick={() => toggle(i)}>
+                        <div className="relative flex justify-center">
+                            <p className="text-l lg:text-3xl font-poppins text-white font-semibold mt-6">{item.question}</p>
+                            <span className="absolute right-10 mt-7 lg:mt-10 text-white text-xl font-poppins">{selectedQuestion === i ? '-' : '+'}</span>
                         </div>
                         <div className="border-b-2 pb-4 border-gray-600 mt-3">
-                            <p className={`${selectedQuestion === i ? "text-xl font-poppins text-white" : "hidden"}`}>{item.answer}</p>
+                            <p className={`${selectedQuestion === i ? "text-l lg:text-xl font-poppins text-white" : "hidden"}`}>{item.answer}</p>
                         </div>
                     </div>
                 ))}

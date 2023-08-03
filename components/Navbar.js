@@ -1,7 +1,7 @@
 function Navbar(){
     return(
         <>
-        <nav className="flex justify-between items-center h-24 w-full mx-auto pl-9 pt-2 pr-7 bg-dark">
+        <nav className="flex justify-between items-center h-24 w-full mx-auto pl-9 pt-2 pr-7">
                 <a href="/"><img src="/images/logowhite.png" className="w-20 h-20 ml-10" /></a>
                 <div className="flex pr-6 mx-auto">
                 <ul className="flex text-white text-center">

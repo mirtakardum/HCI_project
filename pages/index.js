@@ -12,7 +12,7 @@ import Footer from "@/components/Footer.js";
 function Homepage(){
   return(
     <>
-    <div className="h-screen bg-light">
+    <div className="h-fill bg-light">
       <Header />
       <Hero />
       <CTA />

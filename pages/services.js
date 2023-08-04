@@ -7,6 +7,8 @@ import DesktopMockup from "@/components/services/DesktopMockup.js";
 import Header from "../components/Header.js";
 import ComputingAttributes from "@/components/services/ComputingAttributes.js";
 import Footer from "../components/Footer.js"
+import GraphSection from "@/components/services/GraphSection.js";
+import ComputingCTA from "@/components/services/ComputingCTA.js";
 
 function Services(){
 
@@ -44,6 +46,8 @@ function Services(){
       <ComputingDisplay />
       <DesktopMockup />
       <ComputingAttributes />
+      <GraphSection />
+      <ComputingCTA />
       <Footer theme={"dark"}/>
     </div>
     </>

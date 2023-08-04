@@ -26,8 +26,14 @@ function Pricing() {
                 <Header theme={"dark"}/>
                 <PathDisplay title={pricingTitle} />
                 <div className="flex justify-evenly">
-                <PricingCards icon={storageIcon} id={1} selected={selected1} changeSelected={changeSelected} />
-                <PricingCards icon={computingIcon} id={2} selected={selected2} changeSelected={changeSelected} />
+                    <div>
+                    <PricingCards icon={storageIcon} id={1} selected={selected1} changeSelected={changeSelected} />
+
+                    </div>
+                    <div>
+                    <PricingCards icon={computingIcon} id={2} selected={selected2} changeSelected={changeSelected} />
+
+                    </div>
                 </div>
                 <Footer theme={"dark"}/>
             </div>

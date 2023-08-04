@@ -138,7 +138,6 @@ function Pricing() {
                 <PathDisplay title={pricingTitle} />
                 <div className="flex justify-evenly">
                     <div>
-<<<<<<< HEAD
                         <PricingCards icon={storageIcon} id={1} selected={selected1} changeSelected={changeSelected} />
                         <p className="font-space text-white mt-8 text-2xl font-semibold ml-9">Cloud Storage</p>
                         <p className="font-space text-white mt-2 text-sm ml-12">Start from 9,99€/mo</p>
@@ -160,15 +159,6 @@ function Pricing() {
                     <ComputingCards pick={pick1.value} changePick={() => changePick(pick1.id)}/>
                     <ComputingCards pick={pick2.value} changePick={() => changePick(pick2.id)}/>
                     <ComputingCards pick={pick3.value} changePick={() => changePick(pick3.id)}/>
-=======
-                    <PricingCards icon={storageIcon} id={1} selected={selected1} changeSelected={changeSelected} />
-
-                    </div>
-                    <div>
-                    <PricingCards icon={computingIcon} id={2} selected={selected2} changeSelected={changeSelected} />
-
-                    </div>
->>>>>>> dc2d1de288dd2e4d104624799876cf354e390e02
                 </div>
                 <Footer theme={"dark"}/>
             </div>

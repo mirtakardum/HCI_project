@@ -19,7 +19,6 @@ function Services(){
   }
 
   const servicesTitle = "Services"
-  const servicesColor = "babyblue"
 
   const storageTitle = "Cloud storage"
   const computingTitle = "Cloud computing"
@@ -38,7 +37,7 @@ function Services(){
       <div className="absolute top-[17%] right-[40%] h-[5%] w-[3%] z-10 float-right bg-light"></div>
       <div className="absolute top-[25%] left-[30%] h-[4%] w-[2%] z-10 float-right bg-light"></div>
       <div className="absolute top-[20%] right-[10%] h-[3.5%] w-[2%] z-10 float-right bg-light"></div>
-      <div className="flex justify-center">
+      <div className="flex justify-around">
       <Cards title={storageTitle} description={storageDescription} icon={storageIcon} id={1} selected={selected1} changeSelected={changeSelected} />
       <Cards title={computingTitle} description={computingDescription} icon={computingIcon} id={2} selected={selected2} changeSelected={changeSelected} />
       </div>

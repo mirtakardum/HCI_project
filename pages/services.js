@@ -9,15 +9,17 @@ import ComputingAttributes from "@/components/services/ComputingAttributes.js";
 import Footer from "../components/Footer.js"
 import GraphSection from "@/components/services/GraphSection.js";
 import ComputingCTA from "@/components/services/ComputingCTA.js";
+import StorageDisplay from "@/components/services/StorageDisplay.js";
+import StorageMockup from "@/components/services/StorageMockup.js";
 
 function Services(){
 
-  const [selected1, setSelected1] = useState(true)
-  const [selected2, setSelected2] = useState(false)
+  const [selectedStorage, setSelectedStorage] = useState(true)
+  const [selectedComputing, setSelectedComputing] = useState(false)
 
   function changeSelected() {
-    setSelected1(!selected1)
-    setSelected2(!selected2)
+    setSelectedStorage(!selectedStorage)
+    setSelectedComputing(!selectedComputing)
   }
 
   const servicesTitle = "Services"
@@ -39,15 +41,24 @@ function Services(){
       <div className="absolute top-[17%] right-[40%] h-[5%] w-[3%] z-10 float-right bg-light"></div>
       <div className="absolute top-[25%] left-[30%] h-[4%] w-[2%] z-10 float-right bg-light"></div>
       <div className="absolute top-[20%] right-[10%] h-[3.5%] w-[2%] z-10 float-right bg-light"></div>
-      <div className="flex justify-around">
-      <Cards title={storageTitle} description={storageDescription} icon={storageIcon} id={1} selected={selected1} changeSelected={changeSelected} />
-      <Cards title={computingTitle} description={computingDescription} icon={computingIcon} id={2} selected={selected2} changeSelected={changeSelected} />
+      <div className="flex justify-center">
+      <Cards title={storageTitle} description={storageDescription} icon={storageIcon} id={1} selected={selectedStorage} changeSelected={changeSelected} />
+      <Cards title={computingTitle} description={computingDescription} icon={computingIcon} id={2} selected={selectedComputing} changeSelected={changeSelected} />
       </div>
+      {selectedStorage &&
+      <>
+      <StorageDisplay />
+      <StorageMockup />
+      </>}
+      {selectedComputing && 
+      <>
       <ComputingDisplay />
       <DesktopMockup />
       <ComputingAttributes />
       <GraphSection />
       <ComputingCTA />
+      </>
+      }
       <Footer theme={"dark"}/>
     </div>
     </>

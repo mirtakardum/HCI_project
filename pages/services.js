@@ -8,7 +8,7 @@ import Header from "../components/Header.js";
 import ComputingAttributes from "@/components/services/ComputingAttributes.js";
 import Footer from "../components/Footer.js"
 import GraphSection from "@/components/services/GraphSection.js";
-import ComputingCTA from "@/components/services/ComputingCTA.js";
+import ServicesCTA from "@/components/services/ServicesCTA.js";
 import StorageDisplay from "@/components/services/StorageDisplay.js";
 import StorageMockup from "@/components/services/StorageMockup.js";
 import StorageAttributes from "@/components/services/StorageAttributes.js";
@@ -58,9 +58,9 @@ function Services(){
       <DesktopMockup />
       <ComputingAttributes />
       <GraphSection />
-      <ComputingCTA />
       </>
       }
+      <ServicesCTA />
       <Footer theme={"dark"}/>
     </div>
     </>

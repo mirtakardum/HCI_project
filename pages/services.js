@@ -11,6 +11,7 @@ import GraphSection from "@/components/services/GraphSection.js";
 import ComputingCTA from "@/components/services/ComputingCTA.js";
 import StorageDisplay from "@/components/services/StorageDisplay.js";
 import StorageMockup from "@/components/services/StorageMockup.js";
+import StorageAttributes from "@/components/services/StorageAttributes.js";
 
 function Services(){
 
@@ -49,6 +50,7 @@ function Services(){
       <>
       <StorageDisplay />
       <StorageMockup />
+      <StorageAttributes />
       </>}
       {selectedComputing && 
       <>

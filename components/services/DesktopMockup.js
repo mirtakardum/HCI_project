@@ -13,6 +13,7 @@ function DesktopMockup(){
                 <p className="lg:hidden ml-20 mt-2 text-l"><span className="text-[#BA68C8]">else:</span></p>
                 <p className="lg:hidden ml-28 mt-2 text-l"><span className="text-[#F0FF93]">enjoy()</span></p>
                 <p className="lg:hidden w-60 ml-10 text-l text-green-800 mt-2">//"Once a new technology rolls //over you, if you're not part of //the steamroller, you're part of //the road."</p>
+                <p className="lg:hidden w-60 ml-10 text-l text-green-800">//- Steward Brand"</p>
                 </div>
                 <p className="hidden lg:block ml-20 pt-36 w-[40%] text-white font-poppins text-5xl italic font-bold ">"Once a new technology rolls over you, if you're not part of the steamroller, you're part of the road."</p>
                 <p className="hidden lg:block ml-96 pl-20 mt-8 text-white font-poppins text-xl italic font-semibold">- Steward Brand</p>

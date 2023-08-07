@@ -10,9 +10,9 @@ function Footer({ theme }){
         <>        
         <footer class={`${ theme === "light" ?  "bg-light" : "bg-dark"}`}>
             <div class="relative mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-                <div class={`absolute top-[50%] right-[15%] h-[3.5%] w-[1%] z-10 float-right  ${theme === "light" ? "bg-dark" : "bg-light"}`}></div>
-                <div class={`absolute top-[65%] left-[45%] h-[6.5%] w-[2%] z-10 float-right  ${theme === "light" ? "bg-dark" : "bg-light"}`}></div>
-                <div class={`absolute top-[30%] left-[15%] h-[8%] w-[2.5%] z-10 float-right  ${theme === "light" ? "bg-dark" : "bg-light"}`}></div>
+                <div class={`hidden lg:block absolute top-[50%] right-[15%] h-[3.5%] w-[1%] z-10 float-right  ${theme === "light" ? "bg-dark" : "bg-light"}`}></div>
+                <div class={`hidden lg:block absolute top-[65%] left-[45%] h-[6.5%] w-[2%] z-10 float-right  ${theme === "light" ? "bg-dark" : "bg-light"}`}></div>
+                <div class={`hidden lg:block absolute top-[30%] left-[15%] h-[8%] w-[2.5%] z-10 float-right  ${theme === "light" ? "bg-dark" : "bg-light"}`}></div>
                 <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
                     <a href="/" class="flex items-center">

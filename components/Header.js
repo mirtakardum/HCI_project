@@ -30,9 +30,9 @@ function Header({ theme }){
                 </ul>
             </div>
             <div className="mb-2 flex md:hidden" onClick={handleMobile}>
-                {!mobile ? <AiOutlineClose size={30} /> : <CiMenuBurger size={30}/>}
+                {mobile ? <AiOutlineClose size={30} /> : <CiMenuBurger size={30}/>}
             </div>
-            <div className={!mobile ? 'block md:hidden fixed left-0 top-0 w-[60%] h-full bg-dark z-30 ease-in-out duration-500' : 'fixed left-[-100%]'}>
+            <div className={mobile ? 'block md:hidden fixed left-0 top-0 w-[60%] h-full bg-dark z-30 ease-in-out duration-500' : 'fixed left-[-100%]'}>
                 <ul className="pt-14">
                     <li className="p-6 h-[100%] text-l text-babyblue cursor-pointer font-poppins font-bold">HOME</li>
                     <a href="/services"><li className="p-6 h-[100%] text-l text-white hover:text-white cursor-pointer font-poppins font-bold">SERVICES</li></a>

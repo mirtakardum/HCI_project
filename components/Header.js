@@ -16,19 +16,11 @@ function Header({ theme }){
             <a href="/"><img src={theme === "light" ? '/images/logo.png' : '/images/logowhite.png'} className="w-20 h-20 md:ml-10" /></a>
             <div className="hidden md:flex pr-6 mx-auto">
             <ul className={`flex ${theme === "light" ? "text-dark" : "text-white"} text-center`}>
-<<<<<<< HEAD
-                <a href="/"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "text-white" : "text-babyblue"} cursor-pointer font-poppins font-bold`}>HOME</li></a>
-                <a href="/services"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>SERVICES</li></a>
-                <a href="/pricing"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>PRICING</li></a>
-                <a href="/about"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>ABOUT US</li></a>
-                <li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>CAREERS</li>
-=======
-            <a href="/"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>HOME</li></a>
+                <a href="/"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>HOME</li></a>
                 <a href="/services"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>SERVICES</li></a>
                 <a href="/pricing"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>PRICING</li></a>
                 <a href="/about"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>ABOUT US</li></a>
                 <a href="/careers"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>CAREERS</li></a>
->>>>>>> dc2d1de288dd2e4d104624799876cf354e390e02
                 <li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>BLOG</li>
             </ul>
             </div>

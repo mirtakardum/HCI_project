@@ -2,9 +2,10 @@ import React from "react";
 import Header from "../components/Header.js";
 import { useState } from "react";
 import PathDisplay from "../components/PathDisplay.js";
-import PricingCards from "@/components/pricing/PricingCards.js";
-import StorageCards from "../components/pricing/StorageCards.js"
-import ComputingCards from "../components/pricing/ComputingCards.js"
+import PricingCards from "../components/pricing/PricingCards.js";
+import StorageCards from "../components/pricing/StorageCards.js";
+import ComputingCards from "../components/pricing/ComputingCards.js";
+import PaymentTotal from "../components/pricing/PaymentTotal.js";
 import Footer from "../components/Footer.js"
 
 function Pricing() {
@@ -131,14 +132,26 @@ function Pricing() {
     const memoryThree ="100TB"
     const priceThree ="399€"
 
+    const pro = "PRO"
+    const proplus ="PRO+"
+    const ultra = "ULTRA"
+
+    const pricePro = "14,99€"
+    const pricePlus ="49,99€"
+    const priceUltra ="89,99€"
+
     return(
         <>
             <div className="h-fit bg-dark">
                 <Header theme={"dark"}/>
                 <PathDisplay title={pricingTitle} />
+                <div className="absolute top-[40%] right-[50%] h-[2%] w-[1%] z-10 float-right bg-light"></div>
+                <div className="absolute top-[25%] left-[30%] h-[4%] w-[2%] z-10 float-right bg-light"></div>
+                <div className="absolute top-[20%] right-[8%] h-[6%] w-[3%] z-10 float-right bg-light"></div>
+                <div className="absolute top-[45%] right-[12%] h-[4%] w-[2%] z-10 float-right bg-light"></div>
+                <div className="absolute top-[60%] left-[10%] h-[5%] w-[3%] z-10 float-right bg-light"></div>
                 <div className="flex justify-evenly">
                     <div>
-<<<<<<< HEAD
                         <PricingCards icon={storageIcon} id={1} selected={selected1} changeSelected={changeSelected} />
                         <p className="font-space text-white mt-8 text-2xl font-semibold ml-9">Cloud Storage</p>
                         <p className="font-space text-white mt-2 text-sm ml-12">Start from 9,99€/mo</p>
@@ -157,19 +170,11 @@ function Pricing() {
                 </div>
                 <p className="font-space text-white text-6xl ml-20 font-bold mt-36 mb-20" >CLOUD COMPUTING</p>
                 <div className="flex justify-center">
-                    <ComputingCards pick={pick1.value} changePick={() => changePick(pick1.id)}/>
-                    <ComputingCards pick={pick2.value} changePick={() => changePick(pick2.id)}/>
-                    <ComputingCards pick={pick3.value} changePick={() => changePick(pick3.id)}/>
-=======
-                    <PricingCards icon={storageIcon} id={1} selected={selected1} changeSelected={changeSelected} />
-
-                    </div>
-                    <div>
-                    <PricingCards icon={computingIcon} id={2} selected={selected2} changeSelected={changeSelected} />
-
-                    </div>
->>>>>>> dc2d1de288dd2e4d104624799876cf354e390e02
+                    <ComputingCards type = {pro} pricing={pricePro} pick={pick1.value} changePick={() => changePick(pick1.id)}/>
+                    <ComputingCards type= {proplus} pricing={pricePlus} pick={pick2.value} changePick={() => changePick(pick2.id)}/>
+                    <ComputingCards type= {ultra} pricing={priceUltra} pick={pick3.value} changePick={() => changePick(pick3.id)}/>
                 </div>
+                <PaymentTotal />
                 <Footer theme={"dark"}/>
             </div>
         </>

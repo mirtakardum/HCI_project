@@ -33,7 +33,9 @@ module.exports = {
       colors: {
         dark: '#11112B',
         light: '#A7AFCC',
-        babyblue: '#92DEED'
+        babyblue: '#92DEED',
+        navy: '#39394E',
+        lime: '#00FFE0'
       },
     },
   },

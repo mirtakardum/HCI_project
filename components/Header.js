@@ -16,7 +16,7 @@ function Header({ theme }){
             <a href="/"><img src={theme === "light" ? '/images/logo.png' : '/images/logowhite.png'} className="w-20 h-20 md:ml-10" /></a>
             <div className="hidden md:flex pr-6 mx-auto">
             <ul className={`flex ${theme === "light" ? "text-dark" : "text-white"} text-center`}>
-                <a href="/"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>HOME</li></a>
+            <a href="/"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>HOME</li></a>
                 <a href="/services"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>SERVICES</li></a>
                 <a href="/pricing"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>PRICING</li></a>
                 <a href="/about"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>ABOUT US</li></a>
@@ -30,9 +30,9 @@ function Header({ theme }){
                 </ul>
             </div>
             <div className="mb-2 flex md:hidden" onClick={handleMobile}>
-                {!mobile ? <AiOutlineClose size={30} /> : <CiMenuBurger size={30}/>}
+                {mobile ? <AiOutlineClose size={30} /> : <CiMenuBurger size={30}/>}
             </div>
-            <div className={!mobile ? 'block md:hidden fixed left-0 top-0 w-[60%] h-full bg-dark z-30 ease-in-out duration-500' : 'fixed left-[-100%]'}>
+            <div className={mobile ? 'block md:hidden fixed left-0 top-0 w-[60%] h-full bg-dark z-30 ease-in-out duration-500' : 'fixed left-[-100%]'}>
                 <ul className="pt-14">
                     <li className="p-6 h-[100%] text-l text-babyblue cursor-pointer font-poppins font-bold">HOME</li>
                     <a href="/services"><li className="p-6 h-[100%] text-l text-white hover:text-white cursor-pointer font-poppins font-bold">SERVICES</li></a>

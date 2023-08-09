@@ -11,8 +11,6 @@ import Footer from "@/components/Footer.js";
 
 function Homepage(){
 
-
-
   return(
     <>
     <div className="h-fill bg-light">

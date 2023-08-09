@@ -17,10 +17,10 @@ function StorageAttributes(){
             transition={{duration: 0.5}}
             viewport={{once: true}}
             className="mt-6 w-[80%] float-right h-1 border-t-2 border-white" />
-            <ul className="text-white text-3xl text-center ml-24 lg:text-left lg:float-right mr-10 w-[50%] font-poppins font-semibold lg:list-disc mt-14">
+            <ul className="relative overflow-x-hidden lg:h-[300px] text-white text-3xl text-center ml-24 lg:text-left lg:float-right mr-10 w-[50%] font-poppins font-semibold lg:list-disc mt-14">
                 <motion.li
-                initial = {{x: -1000}}
-                whileInView={{x: 0}}
+                initial = {{x: 300}}
+                whileInView={{x: 40}}
                 transition={{duration: 0.5}}
                 viewport={{once: true}}
                 >
@@ -28,8 +28,8 @@ function StorageAttributes(){
                 </motion.li>
                 <div className="lg:hidden mt-8 w-10 mx-auto border-t-2 border-white" />
                 <motion.li
-                initial = {{x: -1000}}
-                whileInView={{x: 0}}
+                initial = {{x: 300}}
+                whileInView={{x: 40}}
                 transition={{duration: 0.5}}
                 viewport={{once: true}}
                 className="mt-8">
@@ -37,8 +37,8 @@ function StorageAttributes(){
                 </motion.li>
                 <div className="lg:hidden mt-8 w-10 mx-auto border-t-2 border-white" />
                 <motion.li
-                initial = {{x: -1000}}
-                whileInView={{x: 0}}
+                initial = {{x: 300}}
+                whileInView={{x: 40}}
                 transition={{duration: 0.5}}
                 viewport={{once: true}}
                 className="mt-8">

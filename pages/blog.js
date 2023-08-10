@@ -10,10 +10,14 @@ function Blog(){
         <div className="h-fill bg-light">
         <Header theme={"light"}/>
         <PathDisplay title={"Blog"} theme={"light"} />
-        <FilterCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
+        <div className="flex justify-between">
+        <div>
+            <BlogCard />
+            <BlogCard />
+            <BlogCard />
+        </div>
+            <FilterCard />
+        </div>
         <Footer theme={"light"} />
         </div>
         </>

@@ -37,12 +37,12 @@ function FAQ(){
         <>
         <div className="pt-10 h-fit pb-10 lg:h-screen bg-dark">
             <p className="text-7xl font-space text-white font-bold text-center">FAQ</p>
-            <p className="text-xl font-poppins text-white text-center">For any further questions feel free to <a className="underline cursor-pointer">contact us</a></p>
-            <div className="text-center mt-20">
+            <p className="text-xl mt-5 font-poppins text-white text-center">For any further questions feel free to <a className="underline cursor-pointer">contact us</a></p>
+            <div className="text-center mt-16">
                 {qna.map((item, i) => (
                     <div className="cursor-pointer hover:bg-slate-800" onClick={() => toggle(i)}>
                         <div className="relative flex justify-center">
-                            <p className="text-l lg:text-3xl font-poppins text-white font-semibold mt-6">{item.question}</p>
+                            <p className="text-l lg:text-2xl font-poppins text-white font-semibold mt-6">{item.question}</p>
                             <span className="absolute right-10 mt-7 lg:mt-10 text-white text-xl font-poppins">{selectedQuestion === i ? '-' : '+'}</span>
                         </div>
                         <div className="border-b-2 pb-4 border-gray-600 mt-3">

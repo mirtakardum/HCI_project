@@ -1,6 +1,7 @@
 import { CiMenuBurger } from "react-icons/ci"
 import { AiOutlineClose } from "react-icons/ai"
 import { useState } from "react"
+import Headroom, { ReactHeadroomProps } from "react-headroom"
 
 function Header({ theme }){
 
@@ -12,6 +13,7 @@ function Header({ theme }){
 
     return(
         <>
+        <Headroom>
         <nav className="flex justify-between items-center h-24 w-full mx-auto pl-4 pr-7">
             <a href="/"><img src={theme === "light" ? '/images/logo.png' : '/images/logowhite.png'} className="w-20 h-20 md:ml-10" /></a>
             <div className="hidden md:flex pr-6 mx-auto">
@@ -21,7 +23,7 @@ function Header({ theme }){
                 <a href="/pricing"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>PRICING</li></a>
                 <a href="/about"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>ABOUT US</li></a>
                 <a href="/careers"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>CAREERS</li></a>
-                <li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>BLOG</li>
+                <a href="/blog"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>BLOG</li></a>
             </ul>
             </div>
             <div className="hidden md:flex pr-6">
@@ -42,6 +44,7 @@ function Header({ theme }){
                 </ul>
             </div>
         </nav>
+        </Headroom>
         </>
     )
 }

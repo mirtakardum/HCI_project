@@ -8,7 +8,7 @@ function ComputingCards({ type, pricing, pick, changePick }){
                     <div className="text-white font-poppins text-center mt-10">
                         <p className="text-xl font-semibold">{type}</p>
                         <div className="flex text-center ml-14 mt-5">
-                            <p className="text-5xl font-bold">{pricing}</p>
+                            <p className="text-5xl font-bold">{pricing}€</p>
                             <p className="mt-5 ml-1">/mo</p>
                         </div>
                     </div>

@@ -124,21 +124,26 @@ function Pricing() {
     const computingIcon = "/images/cloud.png"
 
     const memoryOne = "100GB"
-    const priceOne ="9,99€"
+    const priceOne ="9,99"
 
     const memoryTwo ="10TB"
-    const priceTwo ="39,99€"
+    const priceTwo ="39,99"
 
     const memoryThree ="100TB"
-    const priceThree ="399€"
+    const priceThree ="399"
 
     const pro = "PRO"
     const proplus ="PRO+"
     const ultra = "ULTRA"
 
-    const pricePro = "14,99€"
-    const pricePlus ="49,99€"
-    const priceUltra ="89,99€"
+    const pricePro = "14,99"
+    const pricePlus ="49,99"
+    const priceUltra ="89,99"
+    
+    const storageAttributes100GB = ["Budget friendly", "Encrypted storage", "For small-sized businesses"]
+    const storageAttributes10TB = ["Business standard", "Ready for bigger projects", "For medium-sized businesses"]
+    const storageAttributes100TB = ["Large scale projects", "Used by industry leaders", "For large-sized businesses"]
+
 
     return(
         <>
@@ -164,9 +169,9 @@ function Pricing() {
                 </div>
                 <p className="font-space text-white text-6xl ml-20 font-bold mt-28 mb-20" >STORAGE</p>
                 <div className="flex justify-center">
-                    <StorageCards memory={memoryOne} price={priceOne} option={option1.value} changeOption={() => changeOption(option1.id)} />
-                    <StorageCards memory={memoryTwo} price={priceTwo} option={option2.value} changeOption={() => changeOption(option2.id)} />
-                    <StorageCards memory={memoryThree} price={priceThree} option={option3.value} changeOption={() => changeOption(option3.id)} />
+                    <StorageCards memory={memoryOne} price={priceOne} option={option1.value} attributes={storageAttributes100GB} changeOption={() => changeOption(option1.id)} />
+                    <StorageCards memory={memoryTwo} price={priceTwo} option={option2.value} attributes={storageAttributes10TB} changeOption={() => changeOption(option2.id)} />
+                    <StorageCards memory={memoryThree} price={priceThree} option={option3.value} attributes={storageAttributes100TB} changeOption={() => changeOption(option3.id)} />
                 </div>
                 <p className="font-space text-white text-6xl ml-20 font-bold mt-36 mb-20" >CLOUD COMPUTING</p>
                 <div className="flex justify-center">
@@ -174,7 +179,7 @@ function Pricing() {
                     <ComputingCards type= {proplus} pricing={pricePlus} pick={pick2.value} changePick={() => changePick(pick2.id)}/>
                     <ComputingCards type= {ultra} pricing={priceUltra} pick={pick3.value} changePick={() => changePick(pick3.id)}/>
                 </div>
-                <PaymentTotal />
+                <PaymentTotal storagePick= {[option1, option2, option3]} computingPick= {[pick1, pick2, pick3]} storagePrice={[priceOne, priceTwo, priceThree]} memory={[memoryOne, memoryTwo, memoryThree]} computingPrice={[pricePro, pricePlus, priceUltra]} computingName={[pro, proplus, ultra]}/>
                 <Footer theme={"dark"}/>
             </div>
         </>

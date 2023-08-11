@@ -7,6 +7,7 @@ import StorageCards from "../components/pricing/StorageCards.js";
 import ComputingCards from "../components/pricing/ComputingCards.js";
 import PaymentTotal from "../components/pricing/PaymentTotal.js";
 import Footer from "../components/Footer.js"
+import { BiMemoryCard } from "react-icons/bi";
 
 function Pricing() {
 
@@ -139,11 +140,10 @@ function Pricing() {
     const pricePro = "14,99"
     const pricePlus ="49,99"
     const priceUltra ="89,99"
-    
+
     const storageAttributes100GB = ["Budget friendly", "Encrypted storage", "For small-sized businesses"]
     const storageAttributes10TB = ["Business standard", "Ready for bigger projects", "For medium-sized businesses"]
     const storageAttributes100TB = ["Large scale projects", "Used by industry leaders", "For large-sized businesses"]
-
 
     return(
         <>
@@ -179,7 +179,7 @@ function Pricing() {
                     <ComputingCards type= {proplus} pricing={pricePlus} pick={pick2.value} changePick={() => changePick(pick2.id)}/>
                     <ComputingCards type= {ultra} pricing={priceUltra} pick={pick3.value} changePick={() => changePick(pick3.id)}/>
                 </div>
-                <PaymentTotal storagePick= {[option1, option2, option3]} computingPick= {[pick1, pick2, pick3]} storagePrice={[priceOne, priceTwo, priceThree]} memory={[memoryOne, memoryTwo, memoryThree]} computingPrice={[pricePro, pricePlus, priceUltra]} computingName={[pro, proplus, ultra]}/>
+                <PaymentTotal storagePick = {[option1, option2, option3]} computingPick = {[pick1, pick2, pick3]}  storagePrice = {[priceOne, priceTwo, priceThree]} memory = {[memoryOne, memoryTwo, memoryThree]} computingPrice = {[pricePro, pricePlus, priceUltra]} computingName = {[pro, proplus, ultra]}/>
                 <Footer theme={"dark"}/>
             </div>
         </>

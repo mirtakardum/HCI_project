@@ -12,13 +12,13 @@ function StorageCards({ memory, price, option, attributes, changeOption }){
                             <p className="mt-5 ml-1">/mo</p>
                         </div>
                         <p className="text-white font-poppins text-center mt-5">{attributes[0]}</p>
-                        <div className="w-[70%] border-t-2 border-white mt-3 mx-auto" />
+                        <div className="w-[70%] border-t-2 border-white mt-3 mx-auto " />
                         <p className="text-white font-poppins text-center mt-5">{attributes[1]}</p>
-                        <div className="w-[70%] border-t-2 border-white mt-3 mx-auto" />
+                        <div className="w-[70%] border-t-2 border-white mt-3 mx-auto " />
                         <p className="text-white font-poppins text-center mt-5">{attributes[2]}</p>
                     </div>
                     <div className="flex justify-center mt-5">
-                    <button type="button" className={` ${option === true ? "bg-white text-babyblue hover:bg-slate-200 " : "bg-dark text-white hover:bg-gray-900"} font-medium rounded-lg text-lg px-8 py-2.5 mr-2 mb-2`}>Choose</button>
+                        <button type="button" className={`${option === true ? "bg-white text-babyblue hover:bg-slate-200" : "bg-dark text-white"} bg-dark hover:bg-gray-900 font-medium rounded-lg text-lg px-8 py-2.5`}>Choose</button>
                     </div>
                 </div>
             </div>

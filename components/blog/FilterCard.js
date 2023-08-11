@@ -1,5 +1,3 @@
-
-
 function FilterCard(){
     return(
         <>

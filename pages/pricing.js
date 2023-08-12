@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Header from "../components/Header.js";
 import { useState } from "react";
 import PathDisplay from "../components/PathDisplay.js";
@@ -7,16 +7,23 @@ import StorageCards from "../components/pricing/StorageCards.js";
 import ComputingCards from "../components/pricing/ComputingCards.js";
 import PaymentTotal from "../components/pricing/PaymentTotal.js";
 import Footer from "../components/Footer.js"
-import { BiMemoryCard } from "react-icons/bi";
 
 function Pricing() {
 
-    const [selected1, setSelected1] = useState(true)
+    const [selected1, setSelected1] = useState(false)
     const [selected2, setSelected2] = useState(false)
   
-    function changeSelected() {
-      setSelected1(!selected1)
-      setSelected2(!selected2)
+    function changeSelected(id) {
+      if(id == 1){
+        setSelected1(true)
+        setSelected2(false)
+        storageScrollRef.current?.scrollIntoView({ behavior: "smooth"})
+    }
+    else{
+        setSelected1(false)
+        setSelected2(true)
+        computingScrollRef.current?.scrollIntoView({ behavior: "smooth"})
+      }
     }
 
     const [option1, setOption1] = useState({
@@ -118,6 +125,8 @@ function Pricing() {
         }
     }
 
+    const storageScrollRef = useRef(null)
+    const computingScrollRef = useRef(null)
 
     const pricingTitle = "Pricing"
 
@@ -167,13 +176,13 @@ function Pricing() {
                         <p className="font-space text-white mt-2 text-sm ml-12">Start from 4,99€/mo</p>
                     </div>
                 </div>
-                <p className="font-space text-white text-6xl ml-20 font-bold mt-28 mb-20" >STORAGE</p>
+                <p ref={storageScrollRef} className="font-space text-white text-6xl ml-20 font-bold mt-28 mb-20" >STORAGE</p>
                 <div className="flex justify-center">
                     <StorageCards memory={memoryOne} price={priceOne} option={option1.value} attributes={storageAttributes100GB} changeOption={() => changeOption(option1.id)} />
                     <StorageCards memory={memoryTwo} price={priceTwo} option={option2.value} attributes={storageAttributes10TB} changeOption={() => changeOption(option2.id)} />
                     <StorageCards memory={memoryThree} price={priceThree} option={option3.value} attributes={storageAttributes100TB} changeOption={() => changeOption(option3.id)} />
                 </div>
-                <p className="font-space text-white text-6xl ml-20 font-bold mt-36 mb-20" >CLOUD COMPUTING</p>
+                <p ref={computingScrollRef} className="font-space text-white text-6xl ml-20 font-bold mt-36 mb-20" >CLOUD COMPUTING</p>
                 <div className="flex justify-center">
                     <ComputingCards type = {pro} pricing={pricePro} pick={pick1.value} changePick={() => changePick(pick1.id)}/>
                     <ComputingCards type= {proplus} pricing={pricePlus} pick={pick2.value} changePick={() => changePick(pick2.id)}/>

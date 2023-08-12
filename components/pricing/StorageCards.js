@@ -1,5 +1,3 @@
-
-
 function StorageCards({ memory, price, option, attributes, changeOption }){
     return(
         <>

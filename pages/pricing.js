@@ -125,10 +125,10 @@ function Pricing() {
     const computingIcon = "/images/cloud.png"
 
     const memoryOne = "100GB"
-    const priceOne ="9,99"
+    const priceOne ="9.99"
 
     const memoryTwo ="10TB"
-    const priceTwo ="39,99"
+    const priceTwo ="39.99"
 
     const memoryThree ="100TB"
     const priceThree ="399"
@@ -137,9 +137,9 @@ function Pricing() {
     const proplus ="PRO+"
     const ultra = "ULTRA"
 
-    const pricePro = "14,99"
-    const pricePlus ="49,99"
-    const priceUltra ="89,99"
+    const pricePro = "14.99"
+    const pricePlus ="49.99"
+    const priceUltra ="89.99"
 
     const storageAttributes100GB = ["Budget friendly", "Encrypted storage", "For small-sized businesses"]
     const storageAttributes10TB = ["Business standard", "Ready for bigger projects", "For medium-sized businesses"]

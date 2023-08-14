@@ -2,7 +2,7 @@
 function BlogCard({ title, description, image, authorName, authorPicture, authorTitle, tag }){
     return(
         <>    
-        <div className="mt-20 ml-20 max-w-3xl bg-white rounded-lg shadow-m">
+        <div className="mt-20 ml-10 lg:ml-20 w-80 lg:max-w-3xl bg-white rounded-lg shadow-m">
             <div>
                 <img className="rounded-t-lg h-60 object-fill w-full" src={image} alt="" />
             </div>

@@ -56,6 +56,9 @@ function Blog(){
         <div className="h-fill bg-light">
         <Header theme={"light"}/>
         <PathDisplay title={"Blog"} theme={"light"} />
+        <div className="lg:hidden">
+            <FilterCard current={currentFilter} handleFilter={handleFilter} />
+        </div>
         <div className="flex justify-between">
         <div>
             {currentFilter === "None" ? 
@@ -68,7 +71,9 @@ function Blog(){
             ))
         }
         </div>
-            <FilterCard current={currentFilter} handleFilter={handleFilter} />
+            <div className="hidden lg:block">
+                <FilterCard current={currentFilter} handleFilter={handleFilter} />
+            </div>
         </div>
         <Footer theme={"light"} />
         </div>

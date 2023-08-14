@@ -5,7 +5,10 @@ import PathDisplay from "../components/PathDisplay.js";
 import PricingCards from "../components/pricing/PricingCards.js";
 import StorageCards from "../components/pricing/StorageCards.js";
 import ComputingCards from "../components/pricing/ComputingCards.js";
+import { IoCheckmarkCircleOutline } from "react-icons/io";
+import { IoIosCloseCircleOutline } from "react-icons/io";
 import PaymentTotal from "../components/pricing/PaymentTotal.js";
+
 import Footer from "../components/Footer.js"
 
 function Pricing() {
@@ -154,6 +157,63 @@ function Pricing() {
     const storageAttributes10TB = ["Business standard", "Ready for bigger projects", "For medium-sized businesses"]
     const storageAttributes100TB = ["Large scale projects", "Used by industry leaders", "For large-sized businesses"]
 
+    const computingAttributesPro = [
+        {
+            text: "100 compute units a month",
+            value: true
+        },
+        {
+            text: "20 GB RAM",
+            value: true
+        },
+        {
+            text: "Access to the fastest hardware",
+            value: false
+        },
+        {
+            text: "Priority hardware access",
+            value: false
+        }
+    ]
+
+    const computingAttributesPlus = [
+        {
+            text: "500 compute units a month",
+            value: true
+        },
+        {
+            text: "35 GB RAM",
+            value: true
+        },
+        {
+            text: "Access to the fastest hardware",
+            value: true
+        },
+        {
+            text: "Priority hardware access",
+            value: false
+        }
+    ]
+
+    const computingAttributesUltra = [
+        {
+            text: "500 compute units a month",
+            value: true
+        },
+        {
+            text: "35 GB RAM",
+            value: true
+        },
+        {
+            text: "Access to the fastest hardware",
+            value: true
+        },
+        {
+            text: "Priority hardware access",
+            value: true
+        }
+    ]
+
     return(
         <>
             <div className="h-fit bg-dark">
@@ -184,9 +244,9 @@ function Pricing() {
                 </div>
                 <p ref={computingScrollRef} className="font-space text-white text-6xl ml-20 font-bold mt-36 mb-20" >CLOUD COMPUTING</p>
                 <div className="flex justify-center">
-                    <ComputingCards type = {pro} pricing={pricePro} pick={pick1.value} changePick={() => changePick(pick1.id)}/>
-                    <ComputingCards type= {proplus} pricing={pricePlus} pick={pick2.value} changePick={() => changePick(pick2.id)}/>
-                    <ComputingCards type= {ultra} pricing={priceUltra} pick={pick3.value} changePick={() => changePick(pick3.id)}/>
+                    <ComputingCards type = {pro} pricing={pricePro} pick={pick1.value} attributes={computingAttributesPro} changePick={() => changePick(pick1.id)}/>
+                    <ComputingCards type= {proplus} pricing={pricePlus} pick={pick2.value} attributes={computingAttributesPlus} changePick={() => changePick(pick2.id)}/>
+                    <ComputingCards type= {ultra} pricing={priceUltra} pick={pick3.value} attributes={computingAttributesUltra} changePick={() => changePick(pick3.id)}/>
                 </div>
                 <PaymentTotal storagePick = {[option1, option2, option3]} computingPick = {[pick1, pick2, pick3]}  storagePrice = {[priceOne, priceTwo, priceThree]} memory = {[memoryOne, memoryTwo, memoryThree]} computingPrice = {[pricePro, pricePlus, priceUltra]} computingName = {[pro, proplus, ultra]}/>
                 <Footer theme={"dark"}/>

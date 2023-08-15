@@ -1,9 +1,14 @@
-function CareerCard() {
+function CareerCard({ title, icon }) {
     return(
         <>
-        <a href="#" class="block w-[120%] p-6  bg-light border-b border-gray-600  hover:bg-gray-400">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-            <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+        <a href="#" className="block w-[900px] p-3  bg-light border-b border-gray-600  hover:bg-gray-400">
+            <div className="flex justify-between">
+            <img src={icon} className="w-[12%] mt-2 ml-10"></img>
+            <div>
+                <h5 class=" mt-3 text-3xl font-bold font-poppins tracking-tight text-dark">{title}</h5>
+                <p class="mt-1 font-normal text-right font-poppins text-dark ">Split, Croatia</p>
+            </div>
+            </div>
         </a>
 
         </>

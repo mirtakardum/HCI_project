@@ -21,10 +21,13 @@ function Careers () {
         <div className="absolute top-[45%] right-[12%] h-[4%] w-[2%] z-10 float-right bg-dark"></div>
         <CarrersText />
         <div className="flex justify-between">
-        <div className="mt-16">
-            <CareerCard />
-            <CareerCard />
-            <CareerCard />
+        <div className="mb-20">
+            <CareerCard title = {"Junior Frontend Developer"}  icon={"/images/developer.png"}/>
+            <CareerCard title = {"Senior Backend Developer"}  icon={"/images/developer.png"}/>
+            <CareerCard title = {"Senior Full-Stack Engineer"} icon={"/images/developer.png"}/>
+            <CareerCard title = {"Project Manager"} icon={"/images/projectmanag.png"} />
+            <CareerCard title = {"UI/UX Designer"} icon ={"/images/designer.png"} />
+            <CareerCard title = {"UI/UX Designer"} icon ={"/images/designer.png"} />
         </div>
         <FilterCardCareer />
         </div>

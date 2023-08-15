@@ -10,7 +10,7 @@ function FilterCardCareers(){
                 </div>
                 <div className="flex justify-between cursor-pointer">
                     <p className="text-dark text-l font-poppins font-bold">Developer</p>
-                    <p className="text-dark text-l font-poppins mr-4 mb-2">2</p>
+                    <p className="text-dark text-l font-poppins mr-4 mb-2">3</p>
                 </div>
                 <div className="flex justify-between cursor-pointer">
                     <p className="text-dark text-l font-poppins font-bold">Finance</p>

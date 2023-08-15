@@ -1,4 +1,3 @@
-import React from "react";
 import PathDisplay from "../components/PathDisplay.js"
 import Cards from "../components/services/Cards.js";
 import { useState } from "react";
@@ -18,9 +17,16 @@ function Services(){
   const [selectedStorage, setSelectedStorage] = useState(true)
   const [selectedComputing, setSelectedComputing] = useState(false)
 
-  function changeSelected() {
-    setSelectedStorage(!selectedStorage)
-    setSelectedComputing(!selectedComputing)
+  function changeSelected(service) {
+    if(service == "storage"){
+      setSelectedStorage(true)
+      setSelectedComputing(false)
+    }
+    else if(service == "computing"){
+      setSelectedComputing(true)
+      setSelectedStorage(false)
+    }
+    window.scrollTo({ top: 250, behavior: "smooth"})
   }
 
   const servicesTitle = "Services"
@@ -43,8 +49,8 @@ function Services(){
       <div className="hidden lg:block absolute top-[25%] left-[30%] h-[4%] w-[2%] z-10 float-right bg-light"></div>
       <div className="hidden lg:block absolute top-[20%] right-[10%] h-[3.5%] w-[2%] z-10 float-right bg-light"></div>
       <div className="flex justify-center">
-      <Cards title={storageTitle} description={storageDescription} icon={storageIcon} id={1} selected={selectedStorage} changeSelected={changeSelected} />
-      <Cards title={computingTitle} description={computingDescription} icon={computingIcon} id={2} selected={selectedComputing} changeSelected={changeSelected} />
+      <Cards title={storageTitle} description={storageDescription} icon={storageIcon} id={"storage"} selected={selectedStorage} changeSelected={changeSelected} />
+      <Cards title={computingTitle} description={computingDescription} icon={computingIcon} id={"computing"} selected={selectedComputing} changeSelected={changeSelected} />
       </div>
       {selectedStorage &&
       <>

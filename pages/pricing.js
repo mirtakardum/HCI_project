@@ -46,7 +46,7 @@ function Pricing() {
     function changeOption(id) {
         if (option1.id == id){
             setOption1({
-                value: true,
+                value: !option1.value,
                 id: 1})
             setOption2({
                 value: false,
@@ -60,7 +60,7 @@ function Pricing() {
                 value: false,
                 id: 1})
             setOption2({
-                value: true,
+                value: !option2.value,
                 id: 2})
             setOption3({
                 value: false,
@@ -74,7 +74,7 @@ function Pricing() {
                 value: false,
                 id: 2})
             setOption3({
-                value: true,
+                value: !option3.value,
                 id: 3})
         }
     }
@@ -95,7 +95,7 @@ function Pricing() {
     function changePick(id) {
         if (pick1.id == id){
             setPick1({
-                value: true,
+                value: !pick1.value,
                 id: 1})
             setPick2({
                 value: false,
@@ -109,7 +109,7 @@ function Pricing() {
                 value: false,
                 id: 1})
             setPick2({
-                value: true,
+                value: !pick2.value,
                 id: 2})
             setPick3({
                 value: false,
@@ -123,7 +123,7 @@ function Pricing() {
                 value: false,
                 id: 2})
             setPick3({
-                value: true,
+                value: !pick3.value,
                 id: 3})
         }
     }

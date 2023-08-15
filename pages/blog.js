@@ -60,7 +60,7 @@ function Blog(){
             <FilterCard current={currentFilter} handleFilter={handleFilter} />
         </div>
         <div className="flex justify-between">
-        <div>
+        <div className="mb-32">
             {currentFilter === "None" ? 
             blogs.map(blog => (
                 <BlogCard title={blog.title} description={blog.description} image={blog.img} authorName={blog.authorName} authorPicture={blog.authorPicture} authorTitle={blog.authorTitle} tag={blog.tag}/>

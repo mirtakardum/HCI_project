@@ -1,9 +1,9 @@
 import { CiMenuBurger } from "react-icons/ci"
 import { AiOutlineClose } from "react-icons/ai"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Headroom, { ReactHeadroomProps } from "react-headroom"
 
-function Header({ theme }){
+function Header({ theme, page }){
 
     const [mobile, setMobile] = useState(false)
 
@@ -11,19 +11,52 @@ function Header({ theme }){
         setMobile(!mobile)
     }
 
+    const [activePage, setActivePage] = useState("home-light")
+
+    function determinePageOnNavbar(theme, page){
+        if(page == "home"){
+            if(theme == "light"){setActivePage("home-light")}
+            else if(theme == "dark"){setActivePage("home-dark")}
+        }
+        if(page == "services"){
+            if(theme == "light"){setActivePage("services-light")}
+            else if(theme == "dark"){setActivePage("services-dark")}
+        }
+        if(page == "pricing"){
+            if(theme == "light"){setActivePage("pricing-light")}
+            else if(theme == "dark"){setActivePage("pricing-dark")}
+        }
+        if(page == "about"){
+            if(theme == "light"){setActivePage("about-light")}
+            else if(theme == "dark"){setActivePage("about-dark")}
+        }
+        if(page == "careers"){
+            if(theme == "light"){setActivePage("careers-light")}
+            else if(theme == "dark"){setActivePage("careers-dark")}
+        }
+        if(page == "blog"){
+            if(theme == "light"){setActivePage("blog-light")}
+            else if(theme == "dark"){setActivePage("blog-dark")}
+        }
+    }
+
+    useEffect(() => {
+        determinePageOnNavbar(theme, page)
+    },[])
+
     return(
         <>
         <Headroom>
-        <nav className="flex justify-between items-center h-24 w-full mx-auto pl-4 pr-7">
+        <nav className={`flex justify-between items-center h-24 w-full mx-auto pl-4 pr-7 ${theme === "light" ? "bg-light bg-opacity-60" : "bg-dark bg-opacity-60"}`}>
             <a href="/"><img src={theme === "light" ? '/images/logo.png' : '/images/logowhite.png'} className="w-20 h-20 md:ml-10" /></a>
             <div className="hidden md:flex pr-6 mx-auto">
             <ul className={`flex ${theme === "light" ? "text-dark" : "text-white"} text-center`}>
-                <a href="/"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>HOME</li></a>
-                <a href="/services"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>SERVICES</li></a>
-                <a href="/pricing"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>PRICING</li></a>
-                <a href="/about"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>ABOUT US</li></a>
-                <a href="/careers"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>CAREERS</li></a>
-                <a href="/blog"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} cursor-pointer font-poppins font-bold`}>BLOG</li></a>
+                <a href="/"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} ${activePage === "home-light" ? "text-white" : activePage === "home-dark" ? "text-babyblue" : "text-inherit"} cursor-pointer font-poppins font-bold`}>HOME</li></a>
+                <a href="/services"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} ${activePage === "services-light" ? "text-white" : activePage === "services-dark" ? "text-babyblue" : "text-inherit"} cursor-pointer font-poppins font-bold`}>SERVICES</li></a>
+                <a href="/pricing"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} ${activePage === "pricing-light" ? "text-white" : activePage === "pricing-dark" ? "text-babyblue" : "text-inherit"} cursor-pointer font-poppins font-bold`}>PRICING</li></a>
+                <a href="/about"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} ${activePage === "about-light" ? "text-white" : activePage === "about-dark" ? "text-babyblue" : "text-inheritk"} cursor-pointer font-poppins font-bold`}>ABOUT US</li></a>
+                <a href="/careers"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} ${activePage === "careers-light" ? "text-white" : activePage === "careers-dark" ? "text-babyblue" : "text-inherit"} cursor-pointer font-poppins font-bold`}>CAREERS</li></a>
+                <a href="/blog"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} ${activePage === "blog-light" ? "text-white" : activePage === "blog-dark" ? "text-babyblue" : "text-inherit"} cursor-pointer font-poppins font-bold`}>BLOG</li></a>
             </ul>
             </div>
             <div className="hidden md:flex pr-6">

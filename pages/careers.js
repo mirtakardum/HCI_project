@@ -13,7 +13,7 @@ function Careers () {
     return(
         <>
         <div className="h-fit bg-light">
-        <Header theme={"light"} />
+        <Header theme={"light"} page={"careers"} />
         <PathDisplay title={CareersTitle} theme={"light"}/>
         <div className="absolute top-[40%] right-[50%] h-[2%] w-[1%] z-10 float-right bg-dark"></div>
         <div className="absolute top-[25%] left-[30%] h-[4%] w-[2%] z-10 float-right bg-dark"></div>

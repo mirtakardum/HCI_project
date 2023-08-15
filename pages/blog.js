@@ -54,28 +54,28 @@ function Blog(){
     return (
         <>
         <div className="h-fill bg-light">
-        <Header theme={"light"}/>
-        <PathDisplay title={"Blog"} theme={"light"} />
-        <div className="lg:hidden">
-            <FilterCard current={currentFilter} handleFilter={handleFilter} />
-        </div>
-        <div className="flex justify-between">
-        <div className="mb-32">
-            {currentFilter === "None" ? 
-            blogs.map(blog => (
-                <BlogCard title={blog.title} description={blog.description} image={blog.img} authorName={blog.authorName} authorPicture={blog.authorPicture} authorTitle={blog.authorTitle} tag={blog.tag}/>
-            ))
-            :
-            blogs.filter(blog => blog.tag == currentFilter).map(blog => (
-                <BlogCard title={blog.title} description={blog.description} image={blog.img} authorName={blog.authorName} authorPicture={blog.authorPicture} authorTitle={blog.authorTitle} tag={blog.tag}/>
-            ))
-        }
-        </div>
-            <div className="hidden lg:block">
+            <Header theme={"light"} page={"blog"}/>
+            <PathDisplay title={"Blog"} theme={"light"} />
+            <div className="lg:hidden">
                 <FilterCard current={currentFilter} handleFilter={handleFilter} />
             </div>
-        </div>
-        <Footer theme={"light"} />
+            <div className="flex justify-between">
+            <div className="mb-32">
+                {currentFilter === "None" ? 
+                blogs.map(blog => (
+                    <BlogCard title={blog.title} description={blog.description} image={blog.img} authorName={blog.authorName} authorPicture={blog.authorPicture} authorTitle={blog.authorTitle} tag={blog.tag}/>
+                ))
+                :
+                blogs.filter(blog => blog.tag == currentFilter).map(blog => (
+                    <BlogCard title={blog.title} description={blog.description} image={blog.img} authorName={blog.authorName} authorPicture={blog.authorPicture} authorTitle={blog.authorTitle} tag={blog.tag}/>
+                ))
+            }
+            </div>
+                <div className="hidden lg:block">
+                    <FilterCard current={currentFilter} handleFilter={handleFilter} />
+                </div>
+            </div>
+            <Footer theme={"light"} />
         </div>
         </>
     )

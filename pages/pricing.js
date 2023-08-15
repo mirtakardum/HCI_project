@@ -217,7 +217,7 @@ function Pricing() {
     return(
         <>
             <div className="h-fit bg-dark">
-                <Header theme={"dark"}/>
+                <Header theme={"dark"} page={"pricing"}/>
                 <PathDisplay title={pricingTitle} />
                 <div className="absolute top-[40%] right-[50%] h-[2%] w-[1%] z-10 float-right bg-light"></div>
                 <div className="absolute top-[25%] left-[30%] h-[4%] w-[2%] z-10 float-right bg-light"></div>

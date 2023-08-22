@@ -6,6 +6,10 @@ import { AiFillInstagram } from "react-icons/ai"
 
 function Footer({ theme }){
 
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth"})
+    }
+
     return(
         <>        
         <footer class={`${ theme === "light" ?  "bg-light" : "bg-dark"}`}>
@@ -19,7 +23,7 @@ function Footer({ theme }){
                         <img src={theme === "light" ? '/images/logo.png' : '/images/logowhite.png'} class="h-8 mr-3" alt="CloudByte Logo" />
                         <span class={` ${theme === "light" ? "text-dark" : "text-white"} self-center text-2xl font-semibold whitespace-nowrap font-poppins`}>CloudByte</span>
                     </a>
-                    <img src={theme === "light" ? '/images/cta-button.png' : '/images/cta-blue.png'} class="h-20 mr-3 mt-14" />
+                    <img src={theme === "light" ? '/images/cta-button.png' : '/images/cta-blue.png'} class="h-20 mr-3 mt-14 cursor-pointer" onClick={backToTop} />
                 </div>
                 <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                     <div>
@@ -49,7 +53,7 @@ function Footer({ theme }){
                                 <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
                             </li>
                             <li class="mb-2">
-                                <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                                <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Facebook</a>
                             </li>
                             <li class="mb-2">
                                 <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Instagram</a>

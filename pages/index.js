@@ -14,7 +14,7 @@ function Homepage(){
   return(
     <>
     <div className="h-fill bg-light">
-      <Header theme={"light"}/>
+      <Header theme={"light"} page={"home"}/>
       <Hero />
       <CTA />
       <Why />

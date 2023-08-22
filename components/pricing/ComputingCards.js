@@ -5,8 +5,8 @@ function ComputingCards({ type, pricing, pick, attributes, changePick}){
     return(
         <>
         <div className="relative">
-            <div className="flex mr-10 ml-10 group">
-                <div className={`absolute mx-auto w-[80%] h-[94%] inset-0 ${pick === true ? "blur-md bg-babyblue rounded-lg" : "bg-dark mt-6"} group-hover:blur-md group-hover:bg-babyblue group-hover:rounded-lg `}></div>
+            <div className="flex mr-2 lg:mr-10 ml-2 lg:ml-10 group">
+                <div className={`absolute mx-auto w-[92%] lg:w-[80%] h-[94%] inset-0 ${pick === true ? "blur-md bg-babyblue rounded-lg" : "bg-dark mt-6"} group-hover:blur-md group-hover:bg-babyblue group-hover:rounded-lg `}></div>
                 <div className={`relative mx-auto block w-72 h-[415px] rounded-lg shadowx cursor-pointer ${pick === true ? 'bg-babyblue' : 'bg-gradient-to-b from-gray-600 to-slate-900 mt-6'}`} onClick={changePick}>
                     <div className="text-white font-poppins text-center mt-10">
                         <p className="text-xl font-semibold">{type}</p>

@@ -43,7 +43,7 @@ function Services(){
   return(
     <>
     <div className="h-fit bg-dark">
-      <Header />
+      <Header theme={"dark"} page={"services"} />
       <PathDisplay title={servicesTitle}/>
       
       <div className="hidden lg:block absolute top-[25%] left-[40%] h-[4%] w-[2%] z-10 float-right bg-light"></div>

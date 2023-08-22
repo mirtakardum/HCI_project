@@ -34,7 +34,7 @@ function Pricing() {
         id: 1
     })
     const [option2, setOption2] = useState({
-        value: true,
+        value: false,
         id: 2
     })
     const [option3, setOption3] = useState({
@@ -84,7 +84,7 @@ function Pricing() {
         id: 1
     })
     const [pick2, setPick2] = useState({
-        value: true,
+        value: false,
         id: 2
     })
     const [pick3, setPick3] = useState({
@@ -217,7 +217,7 @@ function Pricing() {
     return(
         <>
             <div className="h-fit bg-dark">
-                <Header theme={"dark"}/>
+                <Header theme={"dark"} page={"pricing"}/>
                 <PathDisplay title={pricingTitle} />
                 <div className="absolute top-[40%] right-[50%] h-[2%] w-[1%] z-10 float-right bg-light"></div>
                 <div className="absolute top-[25%] left-[30%] h-[4%] w-[2%] z-10 float-right bg-light"></div>
@@ -227,23 +227,23 @@ function Pricing() {
                 <div className="flex justify-evenly">
                     <div>
                         <PricingCards icon={storageIcon} id={1} selected={selected1} changeSelected={changeSelected} />
-                        <p className="font-space text-white mt-8 text-2xl font-semibold ml-9">Cloud Storage</p>
-                        <p className="font-space text-white mt-2 text-sm ml-12">Start from 9,99€/mo</p>
+                        <p className="font-space text-white mt-8 text-center lg:text-left text-2xl font-semibold ml-2 lg:mr-0 px-5 lg:px-0 lg:ml-9">Cloud Storage</p>
+                        <p className="font-space text-white mt-2 text-m lg:text-sm text-center lg:text-left lg:ml-12">Start from 9,99€/mo</p>
                     </div>
                     <div>
                         <PricingCards icon={computingIcon} id={2} selected={selected2} changeSelected={changeSelected} />
-                        <p className="font-space text-white mt-8 text-2xl font-semibold ml-4">Cloud Computing</p>
-                        <p className="font-space text-white mt-2 text-sm ml-12">Start from 4,99€/mo</p>
+                        <p className="font-space text-white mt-8 text-2xl font-semibold text-center lg:text-left mr-2 lg:mr-0 ml-5 slg:ml-4">Cloud Computing</p>
+                        <p className="font-space text-white mt-2 text-m lg:text-sm text-center lg:text-left lg:ml-12">Start from 4,99€/mo</p>
                     </div>
                 </div>
-                <p ref={storageScrollRef} className="font-space text-white text-6xl ml-20 font-bold mt-28 mb-20" >STORAGE</p>
-                <div className="flex justify-center">
+                <p ref={storageScrollRef} className="font-space text-white text-center lg:text-left text-6xl lg:ml-20 font-bold mt-28 mb-20" >STORAGE</p>
+                <div className="flex pl-12 lg:pl-0 pr-12 lg:pr-0 pt-5 lg:pt-0 pb-5 lg:pb-0 lg:justify-center overflow-x-auto lg:overflow-x-visible">
                     <StorageCards memory={memoryOne} price={priceOne} option={option1.value} attributes={storageAttributes100GB} changeOption={() => changeOption(option1.id)} />
                     <StorageCards memory={memoryTwo} price={priceTwo} option={option2.value} attributes={storageAttributes10TB} changeOption={() => changeOption(option2.id)} />
                     <StorageCards memory={memoryThree} price={priceThree} option={option3.value} attributes={storageAttributes100TB} changeOption={() => changeOption(option3.id)} />
                 </div>
-                <p ref={computingScrollRef} className="font-space text-white text-6xl ml-20 font-bold mt-36 mb-20" >CLOUD COMPUTING</p>
-                <div className="flex justify-center">
+                <p ref={computingScrollRef} className="font-space text-white text-6xl text-center lg:text-left lg:ml-20 font-bold mt-36 mb-20" >CLOUD COMPUTING</p>
+                <div className="flex pl-12 lg:pl-0 pr-12 lg:pr-0 pt-5 lg:pt-0 pb-5 lg:pb-0 lg:justify-center overflow-x-auto lg:overflow-x-visible">
                     <ComputingCards type = {pro} pricing={pricePro} pick={pick1.value} attributes={computingAttributesPro} changePick={() => changePick(pick1.id)}/>
                     <ComputingCards type= {proplus} pricing={pricePlus} pick={pick2.value} attributes={computingAttributesPlus} changePick={() => changePick(pick2.id)}/>
                     <ComputingCards type= {ultra} pricing={priceUltra} pick={pick3.value} attributes={computingAttributesUltra} changePick={() => changePick(pick3.id)}/>

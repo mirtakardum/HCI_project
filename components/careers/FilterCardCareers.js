@@ -27,6 +27,12 @@ function FilterCardCareers({ current, handleFilter }){
                     className={`text-xl lg:text-l font-poppins font-bold cursor-pointer ${current === "Finance" ? "text-gray-500" : "text-dark"}`} onClick={() => handleFilter("Finance")}>Finance</motion.p>
                     <p className={`text-xl lg:text-l font-poppins mr-4 mb-2 ${current === "Finance" ? "text-gray-500" : "text-dark"}`}>1</p>
                 </div>
+                <motion.p
+                    initial = {{opacity: 1}}
+                    whileHover = {{opacity: 0.6}}
+                    className={`text-xl lg:text-l font-poppins font-bold mt-3 cursor-pointer text-dark ${current === "None" ? "hidden" : "block"}`} onClick={() => handleFilter("showAll")}>
+                    Show All
+                </motion.p>
             </div>
         </div>
         </>

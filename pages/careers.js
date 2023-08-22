@@ -16,7 +16,7 @@ function Careers () {
     const [currentFilter, setCurrentFilter] = useState("None")
 
     function handleFilter(tag){
-        if(currentFilter == tag){
+        if(currentFilter == tag || tag == "showAll"){
             setCurrentFilter("None")
         }
         else{

@@ -45,8 +45,8 @@ function Services(){
     <div className="h-fit bg-dark">
       <Header />
       <PathDisplay title={servicesTitle}/>
-      <div className="hidden lg:block absolute top-[17%] right-[40%] h-[5%] w-[3%] z-10 float-right bg-light"></div>
-      <div className="hidden lg:block absolute top-[25%] left-[30%] h-[4%] w-[2%] z-10 float-right bg-light"></div>
+      
+      <div className="hidden lg:block absolute top-[25%] left-[40%] h-[4%] w-[2%] z-10 float-right bg-light"></div>
       <div className="hidden lg:block absolute top-[20%] right-[10%] h-[3.5%] w-[2%] z-10 float-right bg-light"></div>
       <div className="flex justify-center">
       <Cards title={storageTitle} description={storageDescription} icon={storageIcon} id={"storage"} selected={selectedStorage} changeSelected={changeSelected} />

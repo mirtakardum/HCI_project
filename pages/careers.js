@@ -3,12 +3,59 @@ import Header from "../components/Header.js";
 import PathDisplay from "../components/PathDisplay.js";
 import Footer from "@/components/Footer.js";
 import CarrersText from "../components/careers/CareersText.js";
-import FilterCardCareer from "../components/careers/FilterCardCareers.js";
+import FilterCardCareers from "../components/careers/FilterCardCareers.js";
+import { useState } from "react";
 import CareerCard from "@/components/careers/CareerCard.js";
 
 function Careers () {
     
     const CareersTitle ="Careers"
+
+    const tags = ["Developer", "Design", "Finance"]
+
+    const [currentFilter, setCurrentFilter] = useState("None")
+
+    function handleFilter(tag){
+        if(currentFilter == tag){
+            setCurrentFilter("None")
+        }
+        else{
+            setCurrentFilter(tag)
+        }
+    }
+
+    const careers = [
+        {
+        title: "Junior Frontend Developer",
+        icon: "/images/developer.png",
+        tag: "Developer"
+        },
+        {
+        title: "Senior Backend Developer",
+        icon: "/images/developer.png",
+        tag: "Developer"
+        },
+        {
+        title: "Senior Full-Stack Engineer",
+        icon: "/images/developer.png",
+        tag: "Developer"
+        },
+        {
+        title: "Project Manager",
+        icon: "/images/projectmanag.png",
+        tag: "Finance"
+        },
+        {
+        title: "UI/UX Designer",
+        icon: "/images/designer.png",
+        tag: "Design"
+        },
+        {
+        title: "UI/UX Designer",
+        icon: "/images/designer.png",
+        tag: "Design"
+        },
+    ]
 
     return(
         <>
@@ -20,16 +67,24 @@ function Careers () {
         <div className="absolute top-[20%] right-[8%] h-[6%] w-[3%] z-10 float-right bg-dark"></div>
         <div className="absolute top-[45%] right-[12%] h-[4%] w-[2%] z-10 float-right bg-dark"></div>
         <CarrersText />
+        <div className="lg:hidden">
+            <FilterCardCareers current={currentFilter} handleFilter={handleFilter} />
+        </div>
         <div className="flex justify-between">
         <div className="mb-20">
-            <CareerCard title = {"Junior Frontend Developer"}  icon={"/images/developer.png"}/>
-            <CareerCard title = {"Senior Backend Developer"}  icon={"/images/developer.png"}/>
-            <CareerCard title = {"Senior Full-Stack Engineer"} icon={"/images/developer.png"}/>
-            <CareerCard title = {"Project Manager"} icon={"/images/projectmanag.png"} />
-            <CareerCard title = {"UI/UX Designer"} icon ={"/images/designer.png"} />
-            <CareerCard title = {"UI/UX Designer"} icon ={"/images/designer.png"} />
+        {currentFilter === "None" ? 
+            careers.map(career => (
+                <CareerCard title={career.title} icon={career.icon} tag={career.tag}/>
+            ))
+            :
+            careers.filter(career => career.tag == currentFilter).map(career => (
+                <CareerCard title={career.title} icon={career.icon} tag={career.tag}/>
+            ))
+        }
         </div>
-        <FilterCardCareer />
+            <div className="hidden lg:block">
+                <FilterCardCareers current={currentFilter} handleFilter={handleFilter} />
+            </div>
         </div>
         <Footer theme={"light"}/>
         </div>

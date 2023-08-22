@@ -5,6 +5,10 @@ function StorageAttributes(){
     return(
         <>
         <div className="relative h-[700px] lg:h-[400px] bg-dark">
+        <div className="absolute top-[40%] left-[20%] h-[6%] w-[2%] z-10 float-right bg-light"></div>
+        <div className="absolute top-[70%] left-[30%] h-[10%] w-[3%] z-10 float-right bg-light"></div>
+        <div className="absolute top-[90%] left-[8%] h-[12%] w-[4%] z-10 float-right bg-light"></div>
+        <div className="absolute top-[85%] right-[12%] h-[4%] w-[1%] z-10 float-right bg-light"></div>
             <motion.p 
             initial = {{x: -1000}}
             whileInView={{x: 0}}

@@ -33,12 +33,14 @@ function Hero(){
             }}
             className="hidden 2xl:grid absolute top-[55%] left-[7%] h-[14%] w-[10%] float-right bg-dark"></motion.div>
         <div className="mt-10 relative">
-            <button type="button" className="ml-14 lg:w-fit w-72 lg:float-right lg:mr-[10%] lg:ml-40 mt-12 text-black border-dotted border-3 border-black focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-m font-retro px-5 py-2.5 text-center mb-2">
+            <motion.button 
+            whileHover={{scale: 1.1}}
+            type="button" className="ml-14 lg:w-fit w-72 lg:float-right lg:mr-[10%] lg:ml-40 mt-12 text-black border-dotted border-3 border-black focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-m font-retro px-5 py-2.5 text-center mb-2">
                 <div className="flex">
                 EXPLORE NOW
                 <img src="/images/arrow.svg" className="ml-4"></img>
                 </div>
-            </button>
+            </motion.button>
         </div>
         </>
     )

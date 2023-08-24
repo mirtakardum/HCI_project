@@ -64,20 +64,23 @@ function Header({ theme, page }){
                 <button type="button" className={`${theme === "light" ? 'text-gray-900 hover:text-white border-3 border-gray-800 hover:bg-gray-900' : 'text-white hover:text-white border-3 border-white-800 hover:bg-babyblue'} focus:ring-4 focus:outline-none focus:ring-gray-300 font-bold font-poppins rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2`}>SIGN IN</button>
                 </ul>
             </div>
-            <div className="mb-2 flex md:hidden" onClick={handleMobile}>
-                {mobile ? <AiOutlineClose size={30} /> : <CiMenuBurger size={30}/>}
+        </nav>
+            </Headroom>
+            <nav>
+            <div className="mb-2 absolute top-8 z-20 right-10 md:hidden" onClick={handleMobile}>
+                {mobile ? <AiOutlineClose size={30} className={`${theme === "light" ? "fill-dark" : "fill-white"}`} /> : <CiMenuBurger size={30} className={`${theme === "light" ? "fill-dark" : "fill-white"}`}/>}
             </div>
             <div className={mobile ? 'block md:hidden fixed left-0 top-0 w-[60%] h-full bg-dark z-30 ease-in-out duration-500' : 'fixed left-[-100%]'}>
                 <ul className="pt-14">
                     <li className="p-6 h-[100%] text-l text-babyblue cursor-pointer font-poppins font-bold">HOME</li>
                     <a href="/services"><li className="p-6 h-[100%] text-l text-white hover:text-white cursor-pointer font-poppins font-bold">SERVICES</li></a>
-                    <li className="p-6 h-[100%] text-l text-white hover:text-white cursor-pointer font-poppins font-bold">PRICING</li>
-                    <li className="p-6 h-[100%] text-l text-white hover:text-white cursor-pointer font-poppins font-bold">ABOUT US</li>
-                    <li className="p-6 h-[100%] text-l text-white hover:text-white cursor-pointer font-poppins font-bold">BLOG</li>
+                    <a href="/pricing"><li className="p-6 h-[100%] text-l text-white hover:text-white cursor-pointer font-poppins font-bold">PRICING</li></a>
+                    <a href="/about"><li className="p-6 h-[100%] text-l text-white hover:text-white cursor-pointer font-poppins font-bold">ABOUT US</li></a>
+                    <a href="/careers"><li className="p-6 h-[100%] text-l text-white hover:text-white cursor-pointer font-poppins font-bold">CAREERS</li></a>
+                    <a href="/blog"><li className="p-6 h-[100%] text-l text-white hover:text-white cursor-pointer font-poppins font-bold">BLOG</li></a>
                 </ul>
             </div>
         </nav>
-        </Headroom>
         </>
     )
 }

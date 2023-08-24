@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs"
 import { BsFillArrowRightCircleFill } from "react-icons/bs"
 import { BiRightArrowAlt } from "react-icons/bi"
+import PreviousArrow from "./PreviousArrow";
+import NextArrow from "./NextArrow";
 
 function TestimonialSlider(){
 
@@ -13,7 +15,8 @@ function TestimonialSlider(){
             speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
-            prevArrow: <BsFillArrowLeftCircleFill />
+            prevArrow: <PreviousArrow />,
+            nextArrow: <NextArrow />
         };
 
     return(

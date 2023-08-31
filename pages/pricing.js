@@ -218,7 +218,7 @@ function Pricing() {
         <>
             <div className="h-fit bg-dark">
                 <Header theme={"dark"} page={"pricing"}/>
-                <PathDisplay title={pricingTitle} />
+                <PathDisplay title={pricingTitle} subpage={"none"} />
                 <div className="absolute top-[40%] right-[50%] h-[2%] w-[1%] z-10 float-right bg-light"></div>
                 <div className="absolute top-[25%] left-[30%] h-[4%] w-[2%] z-10 float-right bg-light"></div>
                 <div className="absolute top-[20%] right-[8%] h-[6%] w-[3%] z-10 float-right bg-light"></div>

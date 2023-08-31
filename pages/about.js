@@ -15,7 +15,7 @@ function About(){
       <>
       <div className="h-screen bg-dark">
         <Header theme={"dark"} page={"about"}/>
-        <PathDisplay title={aboutTitle}/>
+        <PathDisplay title={aboutTitle} subpage={"none"}/>
         <div className="hidden lg:block absolute top-[17%] right-[25%] h-[4%] w-[2%] z-10 float-right bg-light"></div>
         <div className="hidden lg:block absolute top-[60%] left-[50%] h-[2%] w-[1%] z-10 float-right bg-light"></div>
         <div className="hidden lg:block absolute top-[25%] left-[40%] h-[4%] w-[2%] z-10 float-right bg-light"></div>

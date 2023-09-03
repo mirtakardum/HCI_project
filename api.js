@@ -1,5 +1,6 @@
 const JSON_REST_BASE =
     "https://my-json-server.typicode.com/vlunic00/JSON_Placeholder/";
+const JSON_CAREER_BASE = "https://my-json-server.typicode.com/vlunic00/Career_JSON_Placeholder"
 
     const api = {
         login: async (email, password) => {

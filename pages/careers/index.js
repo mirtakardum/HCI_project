@@ -1,9 +1,9 @@
 import React from "react";
-import Header from "../components/Header.js";
-import PathDisplay from "../components/PathDisplay.js";
+import Header from "../../components/Header.js";
+import PathDisplay from "../../components/PathDisplay.js";
 import Footer from "@/components/Footer.js";
-import CarrersText from "../components/careers/CareersText.js";
-import FilterCardCareers from "../components/careers/FilterCardCareers.js";
+import CarrersText from "../../components/careers/CareersText.js";
+import FilterCardCareers from "../../components/careers/FilterCardCareers.js";
 import { useState } from "react";
 import CareerCard from "@/components/careers/CareerCard.js";
 

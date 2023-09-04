@@ -44,7 +44,7 @@ function Services(){
     <>
     <div className="h-fit bg-dark">
       <Header theme={"dark"} page={"services"} />
-      <PathDisplay title={servicesTitle}/>
+      <PathDisplay title={servicesTitle} subpage={"none"}/>
       
       <div className="hidden lg:block absolute top-[25%] left-[40%] h-[4%] w-[2%] z-10 float-right bg-light"></div>
       <div className="hidden lg:block absolute top-[20%] right-[10%] h-[3.5%] w-[2%] z-10 float-right bg-light"></div>

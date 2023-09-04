@@ -1,5 +1,5 @@
 import PathDisplay from "@/components/PathDisplay"
-import Header from "../components/Header"
+import Header from "../../components/Header"
 import Footer from "@/components/Footer"
 import BlogCard from "@/components/blog/BlogCard"
 import FilterCard from "@/components/blog/FilterCard"
@@ -55,7 +55,7 @@ function Blog(){
         <>
         <div className="h-fill bg-light">
             <Header theme={"light"} page={"blog"}/>
-            <PathDisplay title={"Blog"} theme={"light"} />
+            <PathDisplay title={"Blog"} theme={"light"} subpage={"none"}/>
             <div className="lg:hidden">
                 <FilterCard current={currentFilter} handleFilter={handleFilter} />
             </div>

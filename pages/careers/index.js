@@ -28,32 +28,38 @@ function Careers () {
         {
         title: "Junior Frontend Developer",
         icon: "/images/developer.png",
-        tag: "Developer"
+        tag: "Developer",
+        slug: "junior-frontend-split"
         },
         {
         title: "Senior Backend Developer",
         icon: "/images/developer.png",
-        tag: "Developer"
+        tag: "Developer",
+        slug: "senior-backend-split"
         },
         {
         title: "Senior Full-Stack Engineer",
         icon: "/images/developer.png",
-        tag: "Developer"
+        tag: "Developer",
+        slug: "senior-full-stack-split"
         },
         {
         title: "Project Manager",
         icon: "/images/projectmanag.png",
-        tag: "Finance"
+        tag: "Finance",
+        slug: "project-manager-split"
         },
         {
         title: "UI/UX Designer",
         icon: "/images/designer.png",
-        tag: "Design"
+        tag: "Design",
+        slug: "ui-ux-designer-split"
         },
         {
         title: "UI/UX Designer",
         icon: "/images/designer.png",
-        tag: "Design"
+        tag: "Design",
+        slug: "ui-ux-designer-zagreb"
         },
     ]
 
@@ -74,11 +80,11 @@ function Careers () {
         <div className="mb-20">
         {currentFilter === "None" ? 
             careers.map(career => (
-                <CareerCard title={career.title} icon={career.icon} tag={career.tag}/>
+                <CareerCard title={career.title} icon={career.icon} slug={career.slug}/>
             ))
             :
             careers.filter(career => career.tag == currentFilter).map(career => (
-                <CareerCard title={career.title} icon={career.icon} tag={career.tag}/>
+                <CareerCard title={career.title} icon={career.icon} slug={career.slug}/>
             ))
         }
         </div>

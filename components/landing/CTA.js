@@ -1,7 +1,10 @@
 function CTA(){
     return(
         <>
-        <div className="mt-32 lg:mt-80 pt-10 bg-light h-fill pb-14">
+        <div className="relative mt-32 lg:mt-80 pt-10 bg-light h-fill pb-14">
+        <div class={`hidden lg:block absolute top-[25%] left-[15%] h-[10%] w-[4%] z-10 float-right bg-dark`}></div>
+        <div class={`hidden lg:block absolute top-[30%] right-[10%] h-[11%] w-[6%] z-10 float-right bg-dark`}></div>
+        <div class={`hidden lg:block absolute top-[55%] right-[40%] h-[5%] w-[2%] z-10 float-right bg-dark`}></div>
             <div className="2xl:flex text-center">
             <p className="text-dark font-space text-7xl font-bold 2xl:ml-28">the</p>
             <p className="text-white font-poppins text-7xl font-bold italic 2xl:ml-4">new era</p>

@@ -22,7 +22,11 @@ function Updates(){
 
     return(
         <>
-        <div className="pt-10 h-fit xl:h-screen pb-10 bg-light">
+        <div className="relative pt-10 h-fit xl:h-screen pb-10 bg-light">
+        <div class={`hidden lg:block absolute top-[5%] right-[40%] h-[5%] w-[2%] z-10 float-right bg-dark`}></div>
+        <div class={`hidden lg:block absolute top-[20%] right-[12%] h-[3%] w-[2%] z-10 float-right bg-dark`}></div>
+        <div class={`hidden lg:block absolute top-[80%] left-[40%] h-[2%] w-[1%] z-10 float-right bg-dark`}></div>
+        <div class={`hidden lg:block absolute top-[32%] left-[13%] h-[6%] w-[3%] z-10 float-right bg-dark`}></div>
             <p className="font-space text-dark text-4xl lg:text-7xl ml-20 font-bold">Always stay updated</p>
             <div className="xl:flex mt-16 xl:mt-40 justify-end h-[41%]">
                 <button type="button" className="hidden xl:block h-12 mr-52 mt-52 text-black border-dotted border-3 border-black font-medium rounded-lg text-m font-retro text-center px-5 py-2.5">

@@ -1,9 +1,6 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import { BsFillArrowLeftCircleFill } from "react-icons/bs"
-import { BsFillArrowRightCircleFill } from "react-icons/bs"
-import { BiRightArrowAlt } from "react-icons/bi"
 import PreviousArrow from "./PreviousArrow";
 import NextArrow from "./NextArrow";
 

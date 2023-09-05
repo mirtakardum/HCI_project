@@ -1,15 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { safeLocalStorage } from '../helpers';
+import { BsFillArrowLeftCircleFill } from "react-icons/bs"
 
 
 function Login(){
-    const [password, setPassword] = useState('');
-    const [email, setEmail] = useState('');
-
     const [error, setError] = useState('');
     const router = useRouter();
-    const [loading, setLoading] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     useEffect(() => {
@@ -32,7 +29,8 @@ function Login(){
     };
     return (
         <>
-        <section class="bg-dark dark:bg-gray-900">
+        <div class="relative bg-dark dark:bg-gray-900">
+        <BsFillArrowLeftCircleFill size={50} color='white' className='absolute top-[10%] left-[10%] cursor-pointer' onClick={() => router.push("/")}/>
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
             <a href="#" class="flex items-center mb-6 text-3xl font-semibold text-white dark:text-white">
                 <img class="w-14 h-14 mr-2" src="/images/logowhite.png" alt="logo" />
@@ -72,7 +70,7 @@ function Login(){
                 </div>
             </div>
         </div>
-      </section>
+      </div>
       </>
     );
 };

@@ -28,7 +28,8 @@ function Blog(){
         authorName: "Bonnie Green",
         authorTitle: "Marketing Advisor",
         authorPicture: "/images/ai-face-1.jpg",
-        tag: "Education"
+        tag: "Education",
+        slug: "cloud-computing-essential"
         },
         {
         title: "Implementing a New State-of-the-Art Security System Across Our Platform",
@@ -37,7 +38,8 @@ function Blog(){
         authorName: "Ivan Horvat",
         authorTitle: "Information Security Analyst",
         authorPicture: "/images/ai-face-2.jpg",
-        tag: "Security"
+        tag: "Security",
+        slug: "new-security-system"
         },
         {
         title: "New CloudByte Server Built in Germany",
@@ -46,7 +48,8 @@ function Blog(){
         authorName: "Sara Kovač",
         authorTitle: "PR Manager",
         authorPicture: "/images/ai-face-3.webp",
-        tag: "Infrastructure"
+        tag: "Infrastructure",
+        slug: "new-server-built"
         },
     ]
 
@@ -63,11 +66,11 @@ function Blog(){
             <div className="mb-32">
                 {currentFilter === "None" ? 
                 blogs.map(blog => (
-                    <BlogCard title={blog.title} description={blog.description} image={blog.img} authorName={blog.authorName} authorPicture={blog.authorPicture} authorTitle={blog.authorTitle} tag={blog.tag}/>
+                    <BlogCard title={blog.title} description={blog.description} image={blog.img} authorName={blog.authorName} authorPicture={blog.authorPicture} authorTitle={blog.authorTitle} tag={blog.tag} slug={blog.slug}/>
                 ))
                 :
                 blogs.filter(blog => blog.tag == currentFilter).map(blog => (
-                    <BlogCard title={blog.title} description={blog.description} image={blog.img} authorName={blog.authorName} authorPicture={blog.authorPicture} authorTitle={blog.authorTitle} tag={blog.tag}/>
+                    <BlogCard title={blog.title} description={blog.description} image={blog.img} authorName={blog.authorName} authorPicture={blog.authorPicture} authorTitle={blog.authorTitle} tag={blog.tag} slug={blog.slug}/>
                 ))
             }
             </div>

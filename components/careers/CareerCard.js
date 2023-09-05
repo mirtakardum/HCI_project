@@ -1,7 +1,7 @@
-function CareerCard({ title, icon }) {
+function CareerCard({ title, icon, slug }) {
     return(
         <>
-        <a href="#" className="block w-fit lg:w-[900px] p-3  bg-light border-b border-gray-600  hover:bg-gray-400">
+        <a href={`/careers/${slug}`} className="block w-fit lg:w-[900px] p-3  bg-light border-b border-gray-600  hover:bg-gray-400">
             <div className="flex lg:justify-between">
             <img src={icon} className="w-[18%] lg:w-[12%] mt-2 ml-3 lg:ml-10"></img>
             <div className="w-full lg:w-fit">

@@ -24,8 +24,8 @@ function BlogPost({ post }){
                     <span className="text-sm ml-3 text-gray-500 dark:text-gray-400">{post.authorTitle}</span>
                 </div>
             </div>
-            <p className='font-poppins italic text-4xl text-center mt-10'>{post.subtitle}</p>
-            <p className='font-poppins text-xl ml-20 mt-20'>{post.body}</p>
+            <p className='font-poppins italic text-4xl text-center mt-10 w-[80%] mx-auto'>{post.subtitle}</p>
+            <p className='font-poppins text-xl ml-5 lg:ml-20 mt-20 w-[90%]'>{post.body}</p>
             <Footer theme={"light"}/>
         </div>
         </>

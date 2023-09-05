@@ -5,7 +5,7 @@ function CarrersText() {
         <h className="font-poppins text-6xl font-bold w-[50%] text-dark">Join us in making great things.</h>
         </div>
 
-        <div className="h-0.5 mt-20 w-[60%] border-dark bg-dark"> </div>
+        <div className="h-0.5 mt-20 w-[59.25%] border-dark bg-dark"> </div>
         </>
     )
 

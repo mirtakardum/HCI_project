@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { safeLocalStorage } from '../helpers';
 import { BsFillArrowLeftCircleFill } from "react-icons/bs"
+import Head from 'next/head';
 
 
 function Login(){
@@ -29,6 +30,9 @@ function Login(){
     };
     return (
         <>
+        <Head>
+            <title>Log In</title>
+        </Head>
         <div class="relative bg-dark dark:bg-gray-900">
         <BsFillArrowLeftCircleFill size={50} color='white' className='absolute top-[10%] left-[10%] cursor-pointer' onClick={() => router.push("/")}/>
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">

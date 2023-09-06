@@ -56,7 +56,7 @@ function PaymentTotal({ storagePick, computingPick, storagePrice, memory, comput
             <div className="h-0.5 mt-3 bg-white"> </div>
             <p className="text-white text-5xl lg:text-6xl lg:ml-80 font-bold font-space">{storageName} {(storageName && selectedComputing) && "&"} {selectedComputing}</p>
         </div>
-            <button type="button" className={`object-right border border-lime text-white ${isActive === true ? "bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br" : "bg-gray-500 cursor-default"} focus:ring-4 focus:outline-none focus:ring-cyan-300 shadow-lg shadow-cyan-500/50 dark:shadow-lg font-poppins font-semibold rounded-lg text-m lg:text-lg px-6 lg:px-20 py-4 lg:py-2 mb-24 text-center ml-7 lg:ml-96 mt-20 lg:mt-24`} onClick={handleActivate}>ACTIVATE</button>
+            <button type="button" className={`object-right border border-lime text-white ${isActive === true ? "bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-2 focus:ring-cyan-300 shadow-cyan-500/50" : "bg-gray-500 focus:ring-4 focus:ring-red-600 cursor-default"} focus:outline-none shadow-lg  dark:shadow-lg font-poppins font-semibold rounded-lg text-m lg:text-lg px-6 lg:px-20 py-4 lg:py-2 mb-24 text-center ml-7 lg:ml-96 mt-20 lg:mt-24`} onClick={handleActivate}>ACTIVATE</button>
         </div>
     </>
     )

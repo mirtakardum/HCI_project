@@ -5,6 +5,7 @@ import AboutText from "../components/about/AboutText.js";
 import Founders from "../components/about/Founders.js";
 import Principles from "../components/about/Principles.js";
 import Footer from "../components/Footer.js"
+import Head from "next/head.js";
 
 function About(){
 
@@ -13,6 +14,9 @@ function About(){
 
     return(
       <>
+      <Head>
+        <title>About Us</title>
+      </Head>
       <div className="h-screen bg-dark">
         <Header theme={"dark"} page={"about"}/>
         <PathDisplay title={aboutTitle} subpage={"none"}/>

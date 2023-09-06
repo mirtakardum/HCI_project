@@ -3,13 +3,17 @@ import api from '../../api';
 import PathDisplay from '@/components/PathDisplay';
 import Image from 'next/image';
 import Footer from '@/components/Footer';
+import Head from 'next/head';
 
 function CareerPost({ post }){
     return(
         <>
+        <Head>
+            <title>Careers - {post.title}</title>
+        </Head>
         <div className='h-fill bg-light'>
             <Header theme={"light"} page={"blog"} />
-            <PathDisplay title={"Careers"} theme={"light"} subpage={post.title} />
+            <PathDisplay title={"careers"} theme={"light"} subpage={post.title} />
             <p className='mt-10 font-space font-bold text-5xl ml-5 lg:ml-20'>{post.title}</p>
             <p className='font-poppins italic mt-5 text-3xl ml-5 lg:ml-20'>{post.location}, Croatia</p>
             <p className='font-poppins italic text-4xl ml-5 lg:ml-20 mt-10'>{post.subtitle}</p>

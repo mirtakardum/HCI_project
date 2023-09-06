@@ -8,11 +8,15 @@ import Testimonials from "@/components/landing/Testimonials.js";
 import Updates from "@/components/landing/Updates.js";
 import FAQ from "@/components/landing/FAQ.js";
 import Footer from "@/components/Footer.js";
+import Head from "next/head.js";
 
 function Homepage(){
 
   return(
     <>
+    <Head>
+      <title>Home</title>
+    </Head>
     <div className="h-fill bg-light">
       <Header theme={"light"} page={"home"}/>
       <Hero />

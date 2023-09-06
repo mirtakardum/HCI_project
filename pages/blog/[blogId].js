@@ -3,14 +3,18 @@ import api from '../../api';
 import PathDisplay from '@/components/PathDisplay';
 import Image from 'next/image';
 import Footer from '@/components/Footer';
+import Head from 'next/head';
 
 
 function BlogPost({ post }){
     return(
         <>
+        <Head>
+            <title>Blog - {post.title}</title>
+        </Head>
         <div className='h-fill bg-light'>
             <Header theme={"light"} page={"blog"} />
-            <PathDisplay title={"Blog"} theme={"light"} subpage={post.title} />
+            <PathDisplay title={"blog"} theme={"light"} subpage={post.title} />
             <Image
             src={post.img}
             width={400}

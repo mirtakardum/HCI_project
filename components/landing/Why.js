@@ -12,7 +12,7 @@ function Why(){
                 <img src="/images/why1.png" className="h-36 mx-auto"></img>
                 <p className="mt-10 text-center text-white font-poppins font-bold text-2xl">Expertise</p>
                 <p className="mt-10 ml-14 mb-10 w-[80%] text-white font-poppins text-l">Our team of experianced experts have dealt with some of the toughest
-                    challenges in cloud computing. Any problem you experience, we'll know how to deal with it.</p>
+                    challenges in cloud computing. Any problem you experience, we&apos;ll know how to deal with it.</p>
                 </div>
                 <div>
                 <img src="/images/why2.png" className="h-36 mx-auto"></img>
@@ -29,7 +29,7 @@ function Why(){
                 <div>
                 <img src="/images/why4.png" className="h-36 mx-auto"></img>
                 <p className="mt-10 text-center text-white font-poppins font-bold text-2xl">Results</p>
-                <p className="mt-10 ml-14 mb-10 w-[80%] text-white font-poppins text-l">Our track record speaks for itself. We've helped businesses of all sizes and
+                <p className="mt-10 ml-14 mb-10 w-[80%] text-white font-poppins text-l">Our track record speaks for itself. We&apos;ve helped businesses of all sizes and
                     industries achieve their goals and potentials using our cloud infrastructure.</p>
                 </div>
             </div>

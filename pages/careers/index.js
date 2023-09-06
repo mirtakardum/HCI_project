@@ -84,11 +84,11 @@ function Careers () {
         <div className="mb-20">
         {currentFilter === "None" ? 
             careers.map(career => (
-                <CareerCard title={career.title} icon={career.icon} slug={career.slug}/>
+                <CareerCard key={career.title} title={career.title} icon={career.icon} slug={career.slug}/>
             ))
             :
             careers.filter(career => career.tag == currentFilter).map(career => (
-                <CareerCard title={career.title} icon={career.icon} slug={career.slug}/>
+                <CareerCard key={career.title} title={career.title} icon={career.icon} slug={career.slug}/>
             ))
         }
         </div>

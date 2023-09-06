@@ -19,10 +19,10 @@ function CareerPost({ post }){
             <p className='font-poppins italic text-4xl ml-5 lg:ml-20 mt-10'>{post.subtitle}</p>
             <p className='font-poppins text-2xl ml-10 lg:ml-20 mt-20 font-bold'>What we expect:</p>
             {post.demands.map(demand => 
-                <p className='font-poppins text-xl ml-10 lg:ml-20 mt-2'>- {demand}</p>)}
+                <p key={demand} className='font-poppins text-xl ml-10 lg:ml-20 mt-2'>- {demand}</p>)}
             <p className='font-poppins text-2xl ml-10 lg:ml-20 mt-20 font-bold'>What we offer:</p>
             {post.offers.map(offer => 
-                <p className='font-poppins text-xl ml-10 lg:ml-20 mt-2'>- {offer}</p>)}
+                <p key={demand} className='font-poppins text-xl ml-10 lg:ml-20 mt-2'>- {offer}</p>)}
             <p className='font-poppins text-2xl text-center font-bold mt-10'>Think you got what it takes?</p>
             <form className='w-[60%] mx-auto mt-10 bg-dark rounded-lg p-10'>
                 <div className="grid md:grid-cols-2 md:gap-6">

@@ -2,6 +2,7 @@ import { BiRightArrowAlt } from "react-icons/bi"
 import { BiLogoFacebook } from "react-icons/bi"
 import { BiLogoTwitter } from "react-icons/bi"
 import { AiFillInstagram } from "react-icons/ai"
+import Link from "next/link"
 
 
 function Footer({ theme }){
@@ -19,10 +20,10 @@ function Footer({ theme }){
                 <div class={`hidden lg:block absolute top-[30%] left-[15%] h-[8%] w-[2.5%] z-10 float-right  ${theme === "light" ? "bg-dark" : "bg-light"}`}></div>
                 <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
-                    <a href="/" class="flex items-center">
+                    <Link href="/" class="flex items-center">
                         <img src={theme === "light" ? '/images/logo.png' : '/images/logowhite.png'} class="h-8 mr-3" alt="CloudByte Logo" />
                         <span class={` ${theme === "light" ? "text-dark" : "text-white"} self-center text-2xl font-semibold whitespace-nowrap font-poppins`}>CloudByte</span>
-                    </a>
+                    </Link>
                     <img src={theme === "light" ? '/images/cta-button.png' : '/images/cta-blue.png'} class="h-20 mr-3 mt-14 cursor-pointer hover:rotate-[360deg] duration-500" onClick={backToTop}/>
                 </div>
                 <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -30,19 +31,19 @@ function Footer({ theme }){
                         <h2 class={` ${theme === "light" ? "text-dark" : "text-white"} mb-6 text-lg font-bold font-lato uppercase`}>Explore</h2>
                         <ul class={`${theme === "light" ? "text-dark" : "text-white"} font-medium`}>
                             <li class="mb-2">
-                                <a href="/" class="hover:underline">Home</a>
+                                <Link href="/" class="hover:underline">Home</Link>
                             </li>
                             <li class="mb-2">
-                                <a href="/services" class="hover:underline">Services</a>
+                                <Link href="/services" class="hover:underline">Services</Link>
                             </li>
                             <li class="mb-2">
-                                <a href="/pricing" class="hover:underline">Pricing</a>
+                                <Link href="/pricing" class="hover:underline">Pricing</Link>
                             </li>
                             <li class="mb-2">
-                                <a href="/about" class="hover:underline">About Us</a>
+                                <Link href="/about" class="hover:underline">About Us</Link>
                             </li>
                             <li>
-                                <a href="/blog" class="hover:underline">Blog</a>
+                                <Link href="/blog" class="hover:underline">Blog</Link>
                             </li>
                         </ul>
                     </div>
@@ -78,7 +79,7 @@ function Footer({ theme }){
             </div>
             <hr class={` ${theme === "light" ? "border-dark" : "border-white"} my-6 sm:mx-auto dark:border-gray-700 lg:my-8`} />
             <div class="sm:flex sm:items-center sm:justify-between">
-                <span class={`${theme === "light" ? "text-dark" : "text-white"} text-sm sm:text-center`}>© 2023 <a href="/" class="hover:underline">CloudByte™</a>. All Rights Reserved.
+                <span class={`${theme === "light" ? "text-dark" : "text-white"} text-sm sm:text-center`}>© 2023 <Link href="/" class="hover:underline">CloudByte™</Link>. All Rights Reserved.
                 </span>
                 <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
                     <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
@@ -117,54 +118,5 @@ function Footer({ theme }){
         </footer>
         </>
     )
-        
-        return(
-        <>
-        <div className="pt-10 h-96 bg-light">
-            <div className="flex">
-                <div>
-                <p className="font-poppins text-dark text-7xl font-bold ml-40 mt-10">MVK</p>
-                <img src="/images/cta-button.png" className="h-28 ml-44 mt-14 cursor-pointer"></img>
-                </div>
-                <div className="flex ml-60 mt-10">
-                    <div>
-                        <p className="font-poppins text-dark text-2xl font-bold">Newsletter</p>
-                        <div className="relative">
-                            <input type="text" id="email" className="mt-10 bg-light border-b-2 border-dark pb-2 pr-10 text-dark placeholder-gray-600" placeholder="Email Address"></input>
-                            <div className="absolute top-9 right-0 flex">
-                                <BiRightArrowAlt size={32}/>
-                            </div>
-                        </div>
-                        <div className="flex mt-20">
-                            <AiFillInstagram size={35} className="cursor-pointer"/>
-                            <BiLogoFacebook size={35} className="ml-10 cursor-pointer"/>
-                            <BiLogoTwitter size={35} className="ml-10 cursor-pointer"/>
-                        </div>
-                    </div>
-                    <div className="ml-40">
-                        <p className="font-poppins text-dark text-2xl font-bold">Explore</p>
-                        <ul className="md:flex-col">
-                            <a href="/aboutus"><li className="font-poppins text-dark text-l mt-2">About us</li></a>
-                            <a href="/services"><li className="font-poppins text-dark text-l mt-2">Services</li></a>
-                            <a href="/pricing"><li className="font-poppins text-dark text-l mt-2">Pricing</li></a>
-                            <a href="/blog"><li className="font-poppins text-dark text-l mt-2">Blog</li></a>
-                            <a href="/careers"><li className="font-poppins text-dark text-l mt-2">Careers</li></a>
-                        </ul>
-                    </div>
-                    <div className="ml-40">
-                        <p className="font-poppins text-dark text-2xl font-bold">Contact</p>
-                        <ul className="flex-col">
-                            <a href="/"><li className="font-poppins text-dark text-l mt-2">Email</li></a>
-                            <a href="/"><li className="font-poppins text-dark text-l mt-2">Phone</li></a>
-                            <a href="/"><li className="font-poppins text-dark text-l mt-2">Address</li></a>
-                            <a href="/"><li className="font-poppins text-dark text-l mt-2">Social Media</li></a>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </>
-    )
 }
-
 export default Footer

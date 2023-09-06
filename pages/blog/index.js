@@ -70,11 +70,11 @@ function Blog(){
             <div className="mb-32">
                 {currentFilter === "None" ? 
                 blogs.map(blog => (
-                    <BlogCard title={blog.title} description={blog.description} image={blog.img} authorName={blog.authorName} authorPicture={blog.authorPicture} authorTitle={blog.authorTitle} tag={blog.tag} slug={blog.slug}/>
+                    <BlogCard key={blog.title} title={blog.title} description={blog.description} image={blog.img} authorName={blog.authorName} authorPicture={blog.authorPicture} authorTitle={blog.authorTitle} tag={blog.tag} slug={blog.slug}/>
                 ))
                 :
                 blogs.filter(blog => blog.tag == currentFilter).map(blog => (
-                    <BlogCard title={blog.title} description={blog.description} image={blog.img} authorName={blog.authorName} authorPicture={blog.authorPicture} authorTitle={blog.authorTitle} tag={blog.tag} slug={blog.slug}/>
+                    <BlogCard key={blog.title} title={blog.title} description={blog.description} image={blog.img} authorName={blog.authorName} authorPicture={blog.authorPicture} authorTitle={blog.authorTitle} tag={blog.tag} slug={blog.slug}/>
                 ))
             }
             </div>

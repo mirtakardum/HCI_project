@@ -31,7 +31,7 @@ function Hero(){
                 scale: 1.1,
                 transition: {duration: 0.5}
             }}
-            className="hidden 2xl:grid absolute top-[17%] right-[12%] h-[20%] w-[13%] z-10 float-right bg-dark"></motion.div>
+            className="2xl:grid absolute top-[17%] right-[12%] h-[7%] lg:h-[20%] w-[20%] lg:w-[13%] z-10 float-right bg-dark"></motion.div>
         <motion.div
             initial = {{ opacity: 0}}
             animate = {{ opacity: 1}}
@@ -40,7 +40,7 @@ function Hero(){
                 scale: 1.1,
                 transition: {duration: 0.5}
             }}
-            className="hidden 2xl:grid absolute top-[52%] right-[4%] h-[10%] w-[6%] float-right bg-dark"></motion.div>
+            className="2xl:grid absolute top-[55%] lg:top-[52%] right-[4%] h-[6%] lg:h-[10%] w-[22%] lg:w-[6%] float-right bg-dark"></motion.div>
         <motion.div
             initial = {{ opacity: 0}}
             animate = {{ opacity: 1}}
@@ -49,7 +49,7 @@ function Hero(){
                 scale: 1.1,
                 transition: {duration: 0.5}
             }}
-            className="hidden 2xl:grid absolute top-[55%] left-[7%] h-[14%] w-[10%] float-right bg-dark"></motion.div>
+            className="2xl:grid absolute top-[55%] left-[7%] h-[5%] lg:h-[14%] w-[10%] float-right bg-dark"></motion.div>
         <div className="mt-10 relative">
             <button type="button" className="ml-14 lg:w-fit w-72 lg:float-right lg:mr-[10%] lg:ml-40 mt-12 text-black border-dotted border-3 border-black focus:ring-2 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-m font-retro px-5 py-2.5 text-center mb-2" onClick={() => explore()}>
                 <div className="flex">

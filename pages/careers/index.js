@@ -72,10 +72,10 @@ function Careers () {
         <div className="h-fit bg-light">
         <Header theme={"light"} page={"careers"} />
         <PathDisplay title={CareersTitle} theme={"light"} subpage={"none"}/>
-        <div className="absolute top-[40%] right-[50%] h-[2%] w-[1%] z-10 float-right bg-dark"></div>
-        <div className="absolute top-[25%] left-[30%] h-[4%] w-[2%] z-10 float-right bg-dark"></div>
-        <div className="absolute top-[20%] right-[8%] h-[6%] w-[3%] z-10 float-right bg-dark"></div>
-        <div className="absolute top-[45%] right-[12%] h-[4%] w-[2%] z-10 float-right bg-dark"></div>
+        <div className="hidden lg:block absolute top-[40%] right-[50%] h-[2%] w-[1%] z-10 float-right bg-dark"></div>
+        <div className="hidden lg:block absolute top-[25%] left-[30%] h-[4%] w-[2%] z-10 float-right bg-dark"></div>
+        <div className="hidden lg:block absolute top-[20%] right-[8%] h-[6%] w-[3%] z-10 float-right bg-dark"></div>
+        <div className="hidden lg:block absolute top-[45%] right-[12%] h-[4%] w-[2%] z-10 float-right bg-dark"></div>
         <CarrersText />
         <div className="lg:hidden">
             <FilterCardCareers current={currentFilter} handleFilter={handleFilter} />

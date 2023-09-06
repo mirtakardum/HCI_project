@@ -9,7 +9,7 @@ function PathDisplay({ title, theme, subpage }){
             <p className={`${theme === "light" ? "text-black" : "text-white"} ${subpage != "none" ? "inline" : "hidden"} ml-1 font-poppins font-bold text-xl cursor-pointer`}><span className="font-medium"> &gt; </span>{subpage}</p>
         </div>
         <div className="ml-4 lg:ml-20 mt-5">
-            <h1 className={`font-space font-bold text-7xl ${subpage === "none" ? "inline" : "hidden"} ${theme === "light" ? "text-black" : "text-white"}`}>{title}</h1>
+            <h1 className={`font-space font-bold capitalize text-7xl ${subpage === "none" ? "inline" : "hidden"} ${theme === "light" ? "text-black" : "text-white"}`}>{title}</h1>
         </div>
         </>
     )

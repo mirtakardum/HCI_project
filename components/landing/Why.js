@@ -7,7 +7,7 @@ function Why(){
         <div class={`hidden lg:block absolute top-[28%] right-[20%] h-[4%] w-[2%] z-10 float-right bg-light`}></div>
         <div class={`hidden lg:block absolute top-[10%] right-[30%] h-[5%] w-[3%] z-10 float-right bg-light`}></div>
             <p className="mt-10 text-center text-white font-space font-bold text-7xl">Why Us?</p>
-            <div className="xl:flex mt-20 -ml-5 w-full justify-between">
+            <div className="xl:flex mt-20 lg:-ml-5 w-full justify-between">
                 <div>
                 <img src="/images/why1.png" className="h-36 mx-auto"></img>
                 <p className="mt-10 text-center text-white font-poppins font-bold text-2xl">Expertise</p>

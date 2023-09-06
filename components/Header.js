@@ -52,7 +52,7 @@ function Header({ theme, page }){
         <>
         <Headroom>
         <nav className={`flex justify-between items-center h-24 w-full mx-auto pl-4 pr-7 ${theme === "light" ? "bg-light bg-opacity-60" : "bg-dark bg-opacity-60"}`}>
-            <Link href="/"><img src={theme === "light" ? '/images/logo.png' : 'images/logowhite.png'} alt="Logo" className="w-20 h-20 md:ml-10" /></Link>
+            <Link href="/"><img src={theme === "light" ? '/images/logo.png' : '/images/logowhite.png'} alt="Logo" className="w-20 h-20 md:ml-10" /></Link>
             <div className="hidden md:flex pr-6 mx-auto">
             <ul className={`flex ${theme === "light" ? "text-dark" : "text-white"} text-center`}>
                 <Link href="/"><li className={`p-6 h-[100%] text-l ${theme === "light" ? "hover:text-white" : "hover:text-babyblue"} ${activePage === "home-light" ? "text-white" : activePage === "home-dark" ? "text-babyblue" : "text-inherit"} cursor-pointer font-poppins font-bold`}>HOME</li></Link>

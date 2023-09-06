@@ -1,4 +1,6 @@
 import { useState } from "react"
+import Overlay from "./Overlay";
+import ContactModal from "./ContactModal"
 
 function FAQ(){
 
@@ -23,6 +25,15 @@ function FAQ(){
     ]
 
     const [selectedQuestion, setSelectedQuestion] = useState(null)
+    const [isOpen, setIsOpen] = useState(false);
+
+    function openModal(){
+        setIsOpen(true)
+    }
+
+    function closeModal(){
+        setIsOpen(false)
+    }
 
 
     const toggle = (i) => {
@@ -36,12 +47,12 @@ function FAQ(){
     return(
         <>
         <div className="relative pt-10 h-fit pb-10 lg:h-screen bg-dark">
-        <div class={`hidden lg:block absolute top-[14%] right-[12%] h-[7%] w-[5%] z-10 float-right bg-light`}></div>
-        <div class={`hidden lg:block absolute top-[18%] left-[15%] h-[4%] w-[2%] z-10 float-right bg-light`}></div>
-        <div class={`hidden lg:block absolute top-[24%] left-[18%] h-[2%] w-[1%] z-10 float-right bg-light`}></div>
-        <div class={`hidden lg:block absolute top-[84%] right-[22%] h-[3%] w-[2%] z-10 float-right bg-light`}></div>
+        <div class={`hidden lg:block absolute top-[14%] right-[12%] h-[7%] w-[5%] float-right bg-light`}></div>
+        <div class={`hidden lg:block absolute top-[18%] left-[15%] h-[4%] w-[2%] float-right bg-light`}></div>
+        <div class={`hidden lg:block absolute top-[24%] left-[18%] h-[2%] w-[1%] float-right bg-light`}></div>
+        <div class={`hidden lg:block absolute top-[84%] right-[22%] h-[3%] w-[2%] float-right bg-light`}></div>
             <p className="text-7xl font-space text-white font-bold text-center">FAQ</p>
-            <p className="text-xl mt-5 font-poppins text-white text-center">For any further questions feel free to <a className="underline cursor-pointer">contact us</a></p>
+            <p className="text-xl mt-5 font-poppins text-white text-center">For any further questions feel free to <span className="underline cursor-pointer" onClick={() => openModal()}>contact us</span></p>
             <div className="text-center mt-16">
                 {qna.map((item, i) => (
                     <div className="cursor-pointer hover:bg-slate-800" onClick={() => toggle(i)}>
@@ -56,6 +67,7 @@ function FAQ(){
                 ))}
             </div>
         </div>
+        {isOpen && (<Overlay close={closeModal}>{<ContactModal close={closeModal}/>}</Overlay>)}
         </>
     )
 }

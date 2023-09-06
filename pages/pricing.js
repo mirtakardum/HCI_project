@@ -223,11 +223,11 @@ function Pricing() {
         <div className="h-fit bg-dark">
             <Header theme={"dark"} page={"pricing"}/>
             <PathDisplay title={pricingTitle} subpage={"none"} />
-            <div className="absolute top-[40%] right-[50%] h-[2%] w-[1%] z-10 float-right bg-light"></div>
-            <div className="absolute top-[25%] left-[30%] h-[4%] w-[2%] z-10 float-right bg-light"></div>
-            <div className="absolute top-[20%] right-[8%] h-[6%] w-[3%] z-10 float-right bg-light"></div>
-            <div className="absolute top-[45%] right-[12%] h-[4%] w-[2%] z-10 float-right bg-light"></div>
-            <div className="absolute top-[60%] left-[10%] h-[5%] w-[3%] z-10 float-right bg-light"></div>
+            <div className="hidden lg:block absolute top-[40%] right-[50%] h-[2%] w-[1%] z-10 float-right bg-light"></div>
+            <div className="hidden lg:block absolute top-[25%] left-[30%] h-[4%] w-[2%] z-10 float-right bg-light"></div>
+            <div className="hidden lg:block absolute top-[20%] right-[8%] h-[6%] w-[3%] z-10 float-right bg-light"></div>
+            <div className="hidden lg:block absolute top-[45%] right-[12%] h-[4%] w-[2%] z-10 float-right bg-light"></div>
+            <div className="hidden lg:block absolute top-[60%] left-[10%] h-[5%] w-[3%] z-10 float-right bg-light"></div>
             <div className="flex justify-evenly">
                 <div>
                     <PricingCards icon={storageIcon} id={1} selected={selected1} changeSelected={changeSelected} />

@@ -10,7 +10,11 @@ function GraphSection(){
             transition={{duration: 1}}
             viewport={{once: true}}
             className="w-[70%] mx-auto text-white text-5xl font-space font-bold text-center"><span className="text-babyblue">CloudByte</span> performance compared to other cloud computing providers</motion.p>
-            <div className="flex mt-36 justify-between lg:justify-center">
+            <div className="flex justify-center mt-16">
+                <div className="w-20 h-6 mt-1 bg-[#79D0F1] rounded-xl"/>
+                <p className="text-3xl font-poppins text-white ml-3 ">- CloudByte</p>
+            </div>
+            <div className="flex mt-28 justify-between lg:justify-center">
                 <div>
                     <motion.img src="/images/aiChart.png"
                     initial = {{opacity: 0}}

@@ -33,9 +33,9 @@ function Login(){
         <Head>
             <title>Log In</title>
         </Head>
-        <div class="relative bg-dark dark:bg-gray-900">
-        <BsFillArrowLeftCircleFill size={50} color='white' className='absolute top-[10%] left-[10%] cursor-pointer' onClick={() => router.push("/")}/>
-        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        <div class="relative bg-dark h-screen dark:bg-gray-900">
+        <BsFillArrowLeftCircleFill size={50} color='white' className='absolute lg:top-[10%] top-[5%] lg:left-[10%] left-[7%]  cursor-pointer' onClick={() => router.push("/")}/>
+        <div class="flex flex-col lg:pt-0 pt-40 items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
             <a href="#" class="flex items-center mb-6 text-3xl font-semibold text-white dark:text-white">
                 <img class="w-14 h-14 mr-2" src="/images/logowhite.png" alt="logo" />
                 CloudByte  

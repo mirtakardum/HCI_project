@@ -1,47 +1,26 @@
 import Head from "next/head";
+import { BsFillArrowLeftCircleFill } from "react-icons/bs"
+import { useRouter } from 'next/router';
 
 function Payment(){
+
+    const router = useRouter()
+
     return (
         <>
         <Head>
             <title>Payment</title>
         </Head>
-        <div className="h-full bg-light">
-        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-            <a href="#" class="flex items-center mb-6 text-3xl font-semibold text-dark dark:text-white">
+        <div className="relative h-screen bg-light">
+        <BsFillArrowLeftCircleFill size={50} color='black' className='absolute lg:top-[10%] top-[5%] lg:left-[10%] left-[7%] cursor-pointer' onClick={() => router.push("/pricing")}/>
+        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0">
+            <a href="#" class="flex items-center lg:pt-0 pt-20 mb-6 mt-10 text-3xl font-semibold text-dark dark:text-white">
                 <img class="w-14 h-14 mr-2" src="/images/logo.png" alt="logo" />
                 CloudByte  
             </a>
             <div class="w-full bg-light rounded-lg border-2 border-dark shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-                    <h1 class="text-xl font-bold leading-tight tracking-tight text-dark md:text-2xl dark:text-white">
-                        Payment
-                    </h1>
                     <form class="space-y-4 md:space-y-6" action="#">
-                        <div className="flex justify-between">
-                            <div>
-                                <label for="name" class="block mb-2 text-sm font-medium text-dark">First Name</label>
-                                <input type="name" name="name" id="name" class="bg-light border-b border-dark text-dark sm:text-sm focus:ring-primary-600 focus:border-primary-600 block w-full placeholder:text-dark p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-dark dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" required=""/>
-                            </div>
-                            <div>
-                                <label for="lastName" class="block mb-2 text-sm font-medium text-dark">Last Name</label>
-                                <input type="lastName" name="lastName" id="lastName" class="bg-light border-b border-dark text-dark sm:text-sm focus:ring-primary-600 focus:border-primary-600 block w-full placeholder:text-dark p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-dark dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Doe" required=""/>
-                            </div>
-                        </div>
-                        <div className="flex justify-between">
-                            <div>
-                                <label for="country" class="block mb-2 text-sm font-medium text-dark">Country</label>
-                                <input type="country" name="country" id="country" class="bg-light border-b border-dark text-dark sm:text-sm focus:ring-primary-600 focus:border-primary-600 block w-full placeholder:text-dark p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-dark dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="e.g. Croatia" required=""/>
-                            </div>
-                            <div>
-                                <label for="city" class="block mb-2 text-sm font-medium text-dark">City</label>
-                                <input type="city" name="city" id="city" class="bg-light border-b border-dark text-dark sm:text-sm focus:ring-primary-600 focus:border-primary-600 block w-full placeholder:text-dark p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-dark dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="e.g. Split" required=""/>
-                            </div>
-                        </div>
-                        <div className="w-[80%]">
-                            <label for="zip" class="block mb-2 text-sm font-medium text-dark">Zip Code</label>
-                            <input type="number" name="zip" id="zip" class="bg-light border-b border-dark text-dark sm:text-sm focus:ring-primary-600 focus:border-primary-600 block w-full placeholder:text-dark p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-dark dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="e.g. 12345" required=""/>
-                        </div>
                         <h1 class="text-xl font-bold leading-tight tracking-tight text-dark md:text-2xl dark:text-white">
                         Card Details
                         </h1>

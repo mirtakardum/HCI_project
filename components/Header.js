@@ -68,12 +68,12 @@ function Header({ theme, page }){
                 {isLoggedIn == true && <button type="button" className={`${theme === "light" ? 'text-gray-900 hover:text-white border-3 border-gray-800 hover:bg-gray-900' : 'text-white hover:text-white border-3 border-white-800 hover:bg-babyblue'} focus:ring-4 focus:outline-none focus:ring-gray-300 font-bold font-poppins rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2`} onClick={() => {safeLocalStorage.setItem('isLoggedIn', false), setIsLoggedIn(false)}}>SIGN OUT</button>}
                 </ul>
             </div>
+            <div className="lg:hidden">
+            {mobile ? <AiOutlineClose size={30} className={`${theme === "light" ? "fill-dark" : "fill-white"}`} onClick={handleMobile} /> : <CiMenuBurger size={30} className={`${theme === "light" ? "fill-dark" : "fill-white"}`} onClick={handleMobile}/>}
+            </div>
         </nav>
             </Headroom>
             <nav>
-            <div className="mb-2 absolute top-8 z-20 right-10 md:hidden" onClick={handleMobile}>
-                {mobile ? <AiOutlineClose size={30} className={`${theme === "light" ? "fill-dark" : "fill-white"}`} /> : <CiMenuBurger size={30} className={`${theme === "light" ? "fill-dark" : "fill-white"}`}/>}
-            </div>
             <div className={mobile ? 'block md:hidden fixed left-0 top-0 w-[60%] h-full bg-dark z-30 ease-in-out duration-500' : 'fixed left-[-100%]'}>
                 <ul className="pt-14">
                     <li className="p-6 h-[100%] text-l text-babyblue cursor-pointer font-poppins font-bold">HOME</li>
@@ -82,6 +82,7 @@ function Header({ theme, page }){
                     <a href="/about"><li className="p-6 h-[100%] text-l text-white hover:text-white cursor-pointer font-poppins font-bold">ABOUT US</li></a>
                     <a href="/careers"><li className="p-6 h-[100%] text-l text-white hover:text-white cursor-pointer font-poppins font-bold">CAREERS</li></a>
                     <a href="/blog"><li className="p-6 h-[100%] text-l text-white hover:text-white cursor-pointer font-poppins font-bold">BLOG</li></a>
+                    <a href="/login"><li className="p-6 h-[100%] text-l text-white hover:text-white cursor-pointer font-poppins font-bold">SIGN IN</li></a>
                 </ul>
             </div>
         </nav>

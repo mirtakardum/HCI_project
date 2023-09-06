@@ -11,6 +11,7 @@ import ServicesCTA from "@/components/services/ServicesCTA.js";
 import StorageDisplay from "@/components/services/StorageDisplay.js";
 import StorageMockup from "@/components/services/StorageMockup.js";
 import StorageAttributes from "@/components/services/StorageAttributes.js";
+import Head from "next/head.js";
 
 function Services(){
 
@@ -42,6 +43,9 @@ function Services(){
 
   return(
     <>
+    <Head>
+      <title>Services</title>
+    </Head>
     <div className="h-fit bg-dark">
       <Header theme={"dark"} page={"services"} />
       <PathDisplay title={servicesTitle} subpage={"none"}/>

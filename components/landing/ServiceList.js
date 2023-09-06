@@ -34,12 +34,12 @@ function ServiceList(){
                         <p className={`font-poppins border-2 border-dark rounded-lg text-center text-dark mt-20 w-screen p-2 lg:p-4 lg:w-[75%] ${selected1 === true ? "text-2xl" : "hidden"}`}>Use the world's most advanced hardware to compute any and all software you or your company needs. Be it training the world's biggest neural networks, simulating physics on a sub-atomic level, or edditing videos in the highest resolutions, there is nothing our hardware can't live up to.</p>
                         <p className={`font-poppins border-2 border-dark rounded-lg text-center text-dark mt-20 w-screen p-2 lg:p-4 lg:w-[75%] ${selected2 === true ? "text-2xl" : "hidden"}`}>Your data is precious. We know that. That's why with CloudByte you can store your data in the most secure and reliable way possible. With regular backups, thorough encryption and lightning fast connection speeds, you can be sure your data is safe and accessible at the click of a button.</p>
                     </div>
-                    <button type="button" className="ml-20 lg:ml-32 mt-12 w-60 lg:w-fit text-black border-dotted border-3 border-black  font-medium rounded-lg text-m font-retro px-5 py-2.5 text-center mb-2">
+                    <a href="/services"><button type="button" className="ml-20 lg:ml-32 mt-12 w-60 lg:w-fit text-black border-dotted border-3 border-black  font-medium rounded-lg text-m font-retro px-5 py-2.5 text-center mb-2">
                         <div className="flex">
                         LEARN MORE
                         <img src="/images/arrow.svg" className="ml-4"></img>
                         </div>
-                    </button>
+                    </button></a>
                 </div>
             </div>
         </div>

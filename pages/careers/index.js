@@ -6,6 +6,7 @@ import CarrersText from "../../components/careers/CareersText.js";
 import FilterCardCareers from "../../components/careers/FilterCardCareers.js";
 import { useState } from "react";
 import CareerCard from "@/components/careers/CareerCard.js";
+import Head from "next/head.js";
 
 function Careers () {
     
@@ -65,6 +66,9 @@ function Careers () {
 
     return(
         <>
+        <Head>
+            <title>Careers</title>
+        </Head>
         <div className="h-fit bg-light">
         <Header theme={"light"} page={"careers"} />
         <PathDisplay title={CareersTitle} theme={"light"} subpage={"none"}/>

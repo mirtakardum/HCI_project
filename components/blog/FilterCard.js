@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 function FilterCard({ current, handleFilter }){
     return(
         <>
-        <div className="mr-24 mt-20 rounded-lg bg-[#D9D9D9] lg:p-5 h-fit w-full lg:w-80">
+        <div className="mr-24 mt-20 rounded-lg bg-[#D9D9D9] lg:p-5 h-fit w-full lg:w-80 sticky top-20">
             <p className="text-dark text-2xl lg:text-xl font-poppins font-bold mt-3 ml-3">Category</p>
             <div className="flex-col mt-10 ml-3">
                 <div className="flex justify-between">

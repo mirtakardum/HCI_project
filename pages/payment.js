@@ -1,7 +1,11 @@
+import Head from "next/head";
 
 function Payment(){
     return (
         <>
+        <Head>
+            <title>Payment</title>
+        </Head>
         <div className="h-full bg-light">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
             <a href="#" class="flex items-center mb-6 text-3xl font-semibold text-dark dark:text-white">

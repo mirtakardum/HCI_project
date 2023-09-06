@@ -4,6 +4,7 @@ import Footer from "@/components/Footer"
 import BlogCard from "@/components/blog/BlogCard"
 import FilterCard from "@/components/blog/FilterCard"
 import { useState } from "react"
+import Head from "next/head"
 
 function Blog(){
 
@@ -56,9 +57,12 @@ function Blog(){
 
     return (
         <>
+        <Head>
+            <title>Blog</title>
+        </Head>
         <div className="h-fill bg-light">
             <Header theme={"light"} page={"blog"}/>
-            <PathDisplay title={"Blog"} theme={"light"} subpage={"none"}/>
+            <PathDisplay title={"blog"} theme={"light"} subpage={"none"}/>
             <div className="lg:hidden">
                 <FilterCard current={currentFilter} handleFilter={handleFilter} />
             </div>

@@ -31,9 +31,9 @@ function StorageAttributes(){
                 viewport={{once: true}}
                 className="hidden lg:block"
                 >
-                    As much capacity as you'll ever need 
+                    As much capacity as you&apos;ll ever need 
                 </motion.li>
-                <li className="lg:hidden flex text-xl ">As much capacity as you'll ever need</li>
+                <li className="lg:hidden flex text-xl ">As much capacity as you&apos;ll ever need</li>
                 <div className="lg:hidden mt-8 w-10 mx-auto border-t-2 border-white" />
                 <motion.li
                 initial = {{x: 300}}

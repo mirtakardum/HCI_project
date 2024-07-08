@@ -55,7 +55,7 @@ function FAQ(){
             <p className="text-xl mt-5 font-poppins text-white text-center">For any further questions feel free to <span className="underline cursor-pointer" onClick={() => openModal()}>contact us</span></p>
             <div className="text-center mt-16">
                 {qna.map((item, i) => (
-                    <div className="cursor-pointer hover:bg-slate-800" onClick={() => toggle(i)}>
+                    <div key={i} className="cursor-pointer hover:bg-slate-800" onClick={() => toggle(i)}>
                         <div className="relative flex justify-center">
                             <p className="text-l lg:text-2xl font-poppins text-white font-semibold mt-6">{item.question}</p>
                             <span className="absolute right-10 mt-7 lg:mt-10 text-white text-xl font-poppins">{selectedQuestion === i ? '-' : '+'}</span>

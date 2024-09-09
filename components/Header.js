@@ -65,7 +65,7 @@ function Header({ theme, page }){
             </div>
             <div className="hidden md:flex pr-6">
                 <ul className="flex text-black text-center">
-                {isLoggedIn == false && <Link href="/login"><button type="button" className={`${theme === "light" ? 'text-gray-900 hover:text-white border-3 border-gray-800 hover:bg-gray-900' : 'text-white hover:text-white border-3 border-white-800 hover:bg-babyblue'} focus:ring-4 focus:outline-none focus:ring-gray-300 font-bold font-poppins rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2`}>SIGN IN</button></Link>}
+                {isLoggedIn == false && <Link href="/login"><button type="button" className={`${theme === "light" ? 'text-gray-900 hover:text-white border-3 border-gray-800 hover:bg-gray-900' : 'text-white hover:text-white border-3 border-white-800 hover:bg-babyblue'} focus:ring-4 focus:outline-none font-bold font-poppins rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2`}>SIGN IN</button></Link>}
                 {isLoggedIn == true && <button type="button" className={`${theme === "light" ? 'text-gray-900 hover:text-white border-3 border-gray-800 hover:bg-gray-900' : 'text-white hover:text-white border-3 border-white-800 hover:bg-babyblue'} focus:ring-4 focus:outline-none focus:ring-gray-300 font-bold font-poppins rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2`} onClick={() => {safeLocalStorage.setItem('isLoggedIn', false), setIsLoggedIn(false)}}>SIGN OUT</button>}
                 </ul>
             </div>
